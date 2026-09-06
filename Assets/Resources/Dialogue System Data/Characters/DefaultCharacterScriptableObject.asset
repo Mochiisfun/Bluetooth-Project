@@ -16,9 +16,9 @@ MonoBehaviour:
   speakingSound: {fileID: 8300000, guid: dec0dd068984f0c419c26b79302cd356, type: 3}
   defaultState:
     emotionLabel: 0
-    speakingSoundPitch: 0.833
+    speakingSoundPitch: 0.653
     reactionSound:
-      enabled: 1
+      enabled: 0
       value: {fileID: 8300000, guid: 71e97a95dee493e4ab7bc23ed0562223, type: 3}
     characterFace:
       enabled: 0

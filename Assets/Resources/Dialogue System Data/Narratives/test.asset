@@ -220,7 +220,7 @@ MonoBehaviour:
     entryPoint: 0
     isCheckpoint: 1
     disableAlreadyChosenOptions: 0
-  <PathToCheckpoint>k__BackingField: 
+  <PathToCheckpoint>k__BackingField: 103.
   <IsNarrativeEndReached>k__BackingField: 0
-  <StartFromPreviousNarrativePath>k__BackingField: 1
+  <StartFromPreviousNarrativePath>k__BackingField: 0
   <Characters>k__BackingField: []
