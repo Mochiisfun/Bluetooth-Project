@@ -16,6 +16,7 @@ MonoBehaviour:
   - rid: 5062963122352423036
   - rid: 5062963122352423037
   - rid: 5062963122352423038
+  - rid: 5062963122352423060
   references:
     version: 2
     RefIds:
@@ -34,3 +35,8 @@ MonoBehaviour:
       data:
         <Name>k__BackingField: character
         stringValue: John
+    - rid: 5062963122352423060
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: TestMoney
+        intValue: 500

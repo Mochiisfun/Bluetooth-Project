@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 namespace DialogueSystem.Data
 {
     [Serializable]
+    
     public abstract class Variable
     {
         [field: SerializeField] public string Name { get; set; }
@@ -80,6 +81,28 @@ namespace DialogueSystem.Data
         
         public override string ToString() => floatValue.ToString(CultureInfo.InvariantCulture);
     }
+
+    [Serializable]
+        public class BoolVariable : Variable
+        {
+            [SerializeField] internal bool boolValue;
+
+            public override object GetValue() => boolValue;
+
+            public override void SetValue(object newValue)
+            {
+                try
+                {
+                    boolValue = bool.Parse(newValue.ToString());
+                }
+                catch (Exception e)
+             {
+                  LogHandler.Alert($"Error while parsing bool value: {e.Message}");
+                }
+            }
+
+            public override string ToString() => boolValue.ToString();
+        }
 
 
     [CreateAssetMenu(fileName = "DialogueVariableData", menuName = "ScriptableObjects/EasyScriptableSingletons/DialogueVariableData")]
@@ -168,5 +191,171 @@ namespace DialogueSystem.Data
                 LogHandler.Log( $"{variable.Name}: {variable}", LogHandler.Color.Green);
             }
         }
+
+        //added code so you can get value not as a
+        public T GetValue<T>(string variableName)
+        {
+            var variable = variables.Find(v => v.Name == variableName);
+
+            if (variable == null)
+            {
+                Debug.LogWarning(
+                    $"Dialogue variable '{variableName}' does not exist."
+                );
+
+                return default;
+            }
+
+            if (variable.GetValue() is T value)
+            {
+                return value;
+            }
+
+            Debug.LogWarning(
+                $"Dialogue variable '{variableName}' is not of type {typeof(T).Name}."
+            );
+
+            return default;
+        }
+
+
+
+
+
+        public void Create<T>(string variableName, T value)
+        {
+            if (variables.Exists(v => v.Name == variableName))
+            {
+                Debug.LogWarning(
+                    $"Game variable '{variableName}' already exists."
+                );
+
+                return;
+            }
+
+            switch (value)
+            {
+                case int intValue:
+                    variables.Add(new IntVariable
+                    {
+                        Name = variableName,
+                        intValue = intValue
+                    });
+                    break;
+
+                case string stringValue:
+                    variables.Add(new StringVariable
+                    {
+                        Name = variableName,
+                        stringValue = stringValue
+                    });
+                    break;
+
+                case float floatValue:
+                    variables.Add(new FloatVariable
+                    {
+                        Name = variableName,
+                        floatValue = floatValue
+                    });
+                    break;
+
+                default:
+                    throw new ArgumentOutOfRangeException(
+                        nameof(value),
+                        value,
+                        "Only int, float and string variables are supported."
+                  );
+            }
+
+                SaveRuntimeData();
+        }
+
+
+
+        public T Get<T>(string variableName)
+        {
+            var variable = variables.Find(v => v.Name == variableName);
+
+            if (variable == null)
+            {
+                Debug.LogWarning(
+                    $"Game variable '{variableName}' does not exist."
+                );
+
+                return default;
+            }
+
+            if (variable.GetValue() is T value)
+            {
+                return value;
+            }
+
+            Debug.LogWarning(
+                $"Game variable '{variableName}' is not of type {typeof(T).Name}."
+            );
+
+            return default;
+        }
+
+
+        public void Set<T>(string variableName, T newValue)
+        {
+            var variable = variables.Find(v => v.Name == variableName);
+
+            if (variable == null)
+            {
+                Debug.LogWarning(
+                    $"Cannot set game variable '{variableName}' because it does not exist."
+                );
+
+                return;
+            }
+
+            variable.SetValue(newValue);
+
+            SaveRuntimeData();
+        }
+
+
+        public void Add<T>(string variableName, T amount)
+        {
+            var variable = variables.Find(v => v.Name == variableName);
+
+            if (variable == null)
+            {
+                Debug.LogWarning(
+                    $"Cannot add to game variable '{variableName}' because it does not exist."
+                );
+
+                return;
+            }
+
+            var currentValue = variable.GetValue();
+
+            switch (currentValue)
+            {
+                case int currentInt when amount is int intAmount:
+                    variable.SetValue(currentInt + intAmount);
+                    break;
+
+                case float currentFloat when amount is float floatAmount:
+                    variable.SetValue(currentFloat + floatAmount);
+                    break;
+
+               default:
+                    Debug.LogWarning(
+                        $"Game variable '{variableName}' does not support Add()."
+                    );
+                    return;
+            }
+
+            SaveRuntimeData();
+        }
+
+        public bool Exists(string variableName)
+        {
+            return variables.Find(v => v.Name == variableName) != null;
+        }
     }
+    
 }
