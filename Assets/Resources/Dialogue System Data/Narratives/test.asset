@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8d50752db9e472b8d367dcf46cdbad8, type: 3}
   m_Name: test
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.Data.DialogueContainer
   <NodeLinks>k__BackingField:
   - <BaseNodeGuid>k__BackingField: abc633e1-2388-4a36-afae-7e512b14694f
     <PortName>k__BackingField: Next
@@ -80,7 +80,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1113.3334, y: 54}
+    position: {x: 1113, y: 54}
     transitionNode: 0
     entryPoint: 0
     isCheckpoint: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1126.6666, y: 429.3333}
+    position: {x: 1127, y: 429}
     transitionNode: 0
     entryPoint: 0
     isCheckpoint: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1126.6666, y: 318}
+    position: {x: 1127, y: 318}
     transitionNode: 0
     entryPoint: 0
     isCheckpoint: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1610.6666, y: 429.3333}
+    position: {x: 1611, y: 429}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1610.6666, y: 318}
+    position: {x: 1611, y: 318}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 1
@@ -149,14 +149,14 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1647.3334, y: 121.333336}
+    position: {x: 1647, y: 121}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
     disableAlreadyChosenOptions: 0
   - guid: f1be4272-2da9-4c72-a0bb-4f3947899efe
     dialogue: []
-    position: {x: 660.6667, y: 318}
+    position: {x: 661, y: 318}
     transitionNode: 0
     entryPoint: 0
     isCheckpoint: 0
@@ -164,13 +164,13 @@ MonoBehaviour:
   - guid: b551527d-3554-405b-bd0d-5949924857ec
     dialogue:
     - <CharacterName>k__BackingField: X
-      <Content>k__BackingField: <sp:0,2><i>Welcome <val:character></i><p:long> to
-        <event:something>my<p:normal><em:Angry> <sp:0,01><color="green">shop</color><sp:0>!!!!!!!!!!!
+      <Content>k__BackingField: <sp:0.2><i>Welcome <val:character></i><p:long> to
+        <event:something>my<p:normal><em:Angry> <sp:0.01><color="green">shop</color><sp:0>!!!!!!!!!!!
       <HideCharacter>k__BackingField: 0
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 336, y: 278.66666}
+    position: {x: 336, y: 279}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1912.6666, y: 374}
+    position: {x: 1913, y: 374}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1330.6666, y: 712}
+    position: {x: 1331, y: 712}
     transitionNode: 0
     entryPoint: 0
     isCheckpoint: 0
@@ -215,12 +215,12 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1050.6666, y: 637.3334}
+    position: {x: 1051, y: 637}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 1
     disableAlreadyChosenOptions: 0
-  <PathToCheckpoint>k__BackingField: 103.
+  <PathToCheckpoint>k__BackingField: 
   <IsNarrativeEndReached>k__BackingField: 0
   <StartFromPreviousNarrativePath>k__BackingField: 0
   <Characters>k__BackingField: []

@@ -18,9 +18,10 @@ namespace DialogueSystem.Runtime.UI
         [SerializeField] private Button buttonPrefab;
         [SerializeField] private Button disabledButtonPrefab;
         [SerializeField] private Transform buttonsParent;
+        [SerializeField] private List<RectTransform> optionButtonPositions;
         [SerializeField] private Button nextMessageButton;
-        [SerializeField] private Vector2 buttonOffset;
-        [SerializeField, Min(1)] private int numberOfColumns = 2;
+        //[SerializeField] private Vector2 buttonOffset;
+        //[SerializeField, Min(1)] private int numberOfColumns = 2;
 
         [Space, Header("UI Rendering")]
         [SerializeField] private Optional<Image> characterSprite;
@@ -36,21 +37,20 @@ namespace DialogueSystem.Runtime.UI
             SetUIActive(false);
         }
         
-        public override void DisplayOptions(List<DialogueOption> options, bool disableChosenOptions,
+        public override void DisplayOptions(
+            List<DialogueOption> options,
+            bool disableChosenOptions,
             ChoosePathDelegate choosePathFunction)
         {
             DisableNextNarrationUI();
-            var parentRect = buttonsParent.GetComponent<RectTransform>().rect;
 
-            var columnIndex = 0;
-            var rowIndex = 0;
-
-            var numberOfOptionsLeft = options.Count;
-            var numberOfOptionsInRow = Mathf.Min(numberOfOptionsLeft, numberOfColumns);
-
-            foreach (var option in options)
+            for (var i = 0; i < options.Count; i++)
             {
-                var isDisabledOption = disableChosenOptions && option.HasAlreadyBeenChosen;
+                var option = options[i];
+                var optionIndex = i;
+
+                var isDisabledOption =
+                    disableChosenOptions && option.HasAlreadyBeenChosen;
 
                 var newOptionButton = ButtonFactory.CreateButton(
                     buttonPrefab,
@@ -60,28 +60,79 @@ namespace DialogueSystem.Runtime.UI
                     DialogueCommandParser.ReplaceVariableTagsByValue(option.Text),
                     delegate
                     {
-                        choosePathFunction(options.IndexOf(option));
+                        choosePathFunction(optionIndex);
                         RemoveOptions();
                         EnableNextNarrationUI();
                     });
 
                 var buttonRect = newOptionButton.GetComponent<RectTransform>();
-                ButtonFactory.PlaceButton(buttonRect, parentRect, columnIndex, rowIndex, numberOfOptionsInRow, buttonOffset);
 
-                columnIndex++;
-                numberOfOptionsLeft--;
+                if (optionIndex < optionButtonPositions.Count)
+                {
+                    ButtonFactory.PlaceButton(
+                        buttonRect,
+                        optionButtonPositions[optionIndex]
+                    );
+                }
+                else
+                {
+                    Debug.LogWarning(
+                        $"Not enough option button positions. " +
+                        $"Option {optionIndex} does not have a position assigned."
+                    );
+                }
 
                 _currentOptionButtonList.Add(newOptionButton);
-
-                if (columnIndex != numberOfColumns)
-                {
-                    continue;
-                }
-                numberOfOptionsInRow = Mathf.Min(numberOfOptionsLeft, numberOfColumns);
-                columnIndex = 0;
-                rowIndex++;
             }
         }
+        
+        //public override void DisplayOptions(List<DialogueOption> options, bool disableChosenOptions,
+            //ChoosePathDelegate choosePathFunction)
+        //{
+            //DisableNextNarrationUI();
+            //var parentRect = buttonsParent.GetComponent<RectTransform>().rect;
+
+            //var columnIndex = 0;
+            //var rowIndex = 0;
+
+            //var numberOfOptionsLeft = options.Count;
+
+            //var numberOfOptionsInRow = Mathf.Min(numberOfOptionsLeft, numberOfColumns);
+
+            //foreach (var option in options)
+            //{
+                //var isDisabledOption = disableChosenOptions && option.HasAlreadyBeenChosen;
+
+                //var newOptionButton = ButtonFactory.CreateButton(
+                    //buttonPrefab,
+                    //disabledButtonPrefab,
+                    //buttonsParent,
+                    //isDisabledOption,
+                    //DialogueCommandParser.ReplaceVariableTagsByValue(option.Text),
+                    //delegate
+                    //{
+                        //choosePathFunction(options.IndexOf(option));
+                        //RemoveOptions();
+                        //EnableNextNarrationUI();
+                    //});
+
+                //var buttonRect = newOptionButton.GetComponent<RectTransform>();
+                //ButtonFactory.PlaceButton(buttonRect, parentRect, columnIndex, rowIndex, numberOfOptionsInRow, buttonOffset);
+
+                //columnIndex++;
+                //numberOfOptionsLeft--;
+
+                //_currentOptionButtonList.Add(newOptionButton);
+
+                //if (columnIndex != numberOfColumns)
+                //{
+                    //continue;
+                //}
+                //numberOfOptionsInRow = Mathf.Min(numberOfOptionsLeft, numberOfColumns);
+                //columnIndex = 0;
+                //rowIndex++;
+            //}
+        //}
 
         private void RemoveOptions()
         {

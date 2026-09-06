@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8d50752db9e472b8d367dcf46cdbad8, type: 3}
-  m_Name: Test Narative 001
+  m_Name: Test Narrative 001
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.Data.DialogueContainer
   <NodeLinks>k__BackingField:
   - <BaseNodeGuid>k__BackingField: e4a0ddf1-c7c7-44e2-88d8-0716994cc3d7
@@ -46,6 +46,6 @@ MonoBehaviour:
     disableAlreadyChosenOptions: 0
   <PathToCheckpoint>k__BackingField: 
   <IsNarrativeEndReached>k__BackingField: 0
-  <StartFromPreviousNarrativePath>k__BackingField: 1
+  <StartFromPreviousNarrativePath>k__BackingField: 0
   <Characters>k__BackingField:
   - {fileID: 11400000, guid: a1fb6b12dfc84004496280234d98e3d5, type: 2}
