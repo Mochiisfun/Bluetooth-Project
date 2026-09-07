@@ -64,6 +64,12 @@ namespace DialogueSystem.Runtime.Command
                     case DialogueCommandType.Event:
                         newCommand = CommandFactory.CreateEventCommand(commandData, _events);
                         break;
+                    case DialogueCommandType.VariableAdd:
+                        newCommand = CommandFactory.CreateVariableAddCommand(commandData);
+                        break;
+                    case DialogueCommandType.VariableSet:
+                        newCommand = CommandFactory.CreateVariableSetCommand(commandData);
+                        break;
                     default:
                         newCommand = new NullCommand(commandData.StartPosition, commandData.MustExecute);
                         break;
@@ -100,6 +106,8 @@ namespace DialogueSystem.Runtime.Command
                 ExecuteCommandsAtPosition(textTyper.TyperPosition);
                 yield return null;
             }
+
+            ExecuteAllCommands();
         }
 
         private List<DialogueCommand> FindCommandsAtPosition(int typerPosition)

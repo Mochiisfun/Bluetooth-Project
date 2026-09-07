@@ -1,4 +1,6 @@
-﻿namespace DialogueSystem.Data
+﻿using JetBrains.Annotations;
+
+namespace DialogueSystem.Data
 {
     public class CommandData
     {
@@ -9,8 +11,13 @@
         public bool[] BoolValues { get; set; }
         public float[] FloatValues { get; set; }
         public string StringValue { get; set; }
+        public float VariableAmount { get; set; } // newly added for variable get and set
+        public string VariableName { get; set; } // newly added for variable get and set
+        public string VariableValue { get; set; } // newly added for variable get and set
+
         public TextAnimationType TextAnimValue { get; set; }
         public Emotion EmotionValue { get; set; }
+        
     }
     
     public enum DialogueCommandType
@@ -22,7 +29,9 @@
         MusicEnd, //must execute
         SoundEffect, //must execute
         Animation, //must execute
-        Event //must execute
+        Event, //must execute
+        VariableAdd, //must execute
+        VariableSet //must execute
     }
 
     public enum TextAnimationType

@@ -49,6 +49,13 @@ namespace DialogueSystem.Runtime.Command
         
         private const string EventRegexString = "<event:(?<event>" + RemainderRegex + ")>";
         private static readonly Regex EventRegex = new (EventRegexString);
+
+        private const string VariableAddRegexString = "<add:(?<variable>.*?):(?<amount>-?\\d+(?:\\.\\d+)?)>";
+        private static readonly Regex VariableAddRegex = new(VariableAddRegexString);
+
+        private const string VariableSetRegexString = "<set:(?<variable>.*?):(?<value>.*?)>";
+        private static readonly Regex VariableSetRegex = new(VariableSetRegexString);
+
         
         private static readonly Dictionary<string, float> PauseDictionary = new()
         {
@@ -143,6 +150,8 @@ namespace DialogueSystem.Runtime.Command
             message = HandleSoundTags(message, result);
             message = HandleAnimTags(message, result);
             message = HandleEventTags(message, result);
+            message = HandleVariableAddTags(message, result);
+            message = HandleVariableSetTags(message, result);
 
             return new ParsedMessage
             {
@@ -190,6 +199,48 @@ namespace DialogueSystem.Runtime.Command
             }
 
             return processedMessage;
+        }
+
+        private static string HandleVariableAddTags(
+            string message,
+            List<CommandData> commands)
+        {
+            var matches = VariableAddRegex.Matches(message);
+
+            foreach (Match match in matches)
+            {
+                commands.Add(new CommandData
+                {
+                    Type = DialogueCommandType.VariableAdd,
+                    StartPosition = match.Index,
+                    MustExecute = true,
+                    VariableName = match.Groups["variable"].Value,
+                    VariableAmount = float.Parse(match.Groups["amount"].Value)
+                });
+            }
+
+            return VariableAddRegex.Replace(message, "");
+        }
+
+        private static string HandleVariableSetTags(
+            string message,
+            List<CommandData> commands)
+        {
+            var matches = VariableSetRegex.Matches(message);
+
+            foreach (Match match in matches)
+            {
+                commands.Add(new CommandData
+                {
+                    Type = DialogueCommandType.VariableSet,
+                    StartPosition = match.Index,
+                    MustExecute = true,
+                    VariableName = match.Groups["variable"].Value,
+                    VariableValue = match.Groups["value"].Value
+                });
+            }
+
+            return VariableSetRegex.Replace(message, "");
         }
 
         private static string HandleAnimTags(string processedMessage, ICollection<CommandData> result)

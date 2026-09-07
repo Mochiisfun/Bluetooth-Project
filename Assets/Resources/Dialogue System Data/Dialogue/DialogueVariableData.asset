@@ -43,7 +43,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: Money
-        intValue: 600
+        intValue: 1750
     - rid: 5062963137516404822
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
@@ -53,7 +53,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: MayaAffection
-        intValue: 0
+        intValue: 25
     - rid: 5062963137516404824
       type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
@@ -63,4 +63,4 @@ MonoBehaviour:
       type: {class: StringVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: PlayerName
-        stringValue: Player
+        stringValue: player

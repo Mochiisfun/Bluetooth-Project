@@ -15,5 +15,7 @@ namespace DialogueSystem.Runtime.Command
         public static SoundEffectCommand CreateSoundEffectCommand(CommandData data) => new(data.StartPosition, data.MustExecute, data.StringValue);
         public static AnimationCommand CreateAnimationCommand(CommandData data, TextAnimator textAnimator) => new(data.StartPosition, data.EndPosition, data.MustExecute, textAnimator, data.TextAnimValue, data.FloatValues?[0], data.FloatValues?[1], data.BoolValues?[0]);
         public static DialogueCommand CreateEventCommand(CommandData data, DialogueMonoBehaviour.DialogueEvent[] events) => new EventCommand(data.StartPosition, data.MustExecute, data.StringValue, events);
+       public static VariableAddCommand CreateVariableAddCommand(CommandData data) => new(data.StartPosition, data.MustExecute, data.VariableName, data.VariableAmount);
+       public static VariableSetCommand CreateVariableSetCommand(CommandData data) => new(data.StartPosition, data.MustExecute, data.VariableName, data.VariableValue);
     }
 }
