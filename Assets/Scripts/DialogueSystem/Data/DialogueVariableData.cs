@@ -259,15 +259,35 @@ namespace DialogueSystem.Data
                     });
                     break;
 
+                case bool boolValue:
+                    variables.Add(new BoolVariable
+                    {
+                        Name = variableName,
+                        boolValue = boolValue
+                    });
+                break;
+
                 default:
                     throw new ArgumentOutOfRangeException(
                         nameof(value),
                         value,
-                        "Only int, float and string variables are supported."
+                        "Only int, float, string and bool variables are supported."
                   );
             }
 
                 SaveRuntimeData();
+        }
+
+        public Type GetVariableType(string variableName)
+        {
+            var variable = variables.Find(v => v.Name == variableName);
+
+            if (variable == null)
+            {
+                return null;
+            }
+
+            return variable.GetValue()?.GetType();
         }
 
 
