@@ -1,6 +1,8 @@
 ﻿using System;
+using DialogueSystem.Runtime;
 using UnityEngine;
 using UnityEngine.Serialization;
+
 
 namespace DialogueSystem.Data
 {
@@ -18,5 +20,8 @@ namespace DialogueSystem.Data
         [field: FormerlySerializedAs("TargetNodeGuid")]
         [field: SerializeField]
         public string TargetNodeGuid { get; set; }
+
+        [field: SerializeField]
+        public DialogueCondition Condition { get; set; }
     }
 }

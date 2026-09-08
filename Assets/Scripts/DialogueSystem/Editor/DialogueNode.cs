@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DialogueSystem.Runtime;
 using DialogueSystem.Runtime.Narration;
 using UnityEditor.Experimental.GraphView;
 
@@ -12,5 +13,6 @@ namespace DialogueSystem.Editor
         public bool TransitionNode { get; set; }
         public bool Checkpoint { get; set; }
         public bool DisableAlreadyChosenOptions { get; set; }
+        public List<DialogueCondition> ChoiceConditions { get; set; } = new();
     }
 }

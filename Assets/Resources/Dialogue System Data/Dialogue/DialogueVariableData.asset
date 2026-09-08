@@ -53,7 +53,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: MayaAffection
-        intValue: 25
+        intValue: 20
     - rid: 5062963137516404824
       type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:

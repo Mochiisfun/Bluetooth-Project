@@ -87,7 +87,7 @@ namespace DialogueSystem.Runtime.Utility
             options.ForEach(option =>
             {
                 var nextNode = narrativeToLoad.DialogueNodeData.Find(dialogueNode => option.TargetNodeGuid == dialogueNode.Guid);
-                choiceNode.AddOption(option.PortName, CreateNextNode(nextNode, narrative));
+                choiceNode.AddOption(option.PortName, CreateNextNode(nextNode, narrative), option.Condition);
             });
 
             return choiceNode;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DialogueSystem.Runtime;
 using DialogueSystem.Runtime.Narration;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -123,7 +124,7 @@ namespace DialogueSystem.Editor
             dialogueNode.mainContainer.AddToClassList("dialogueNodeMainContainer");
         }
 
-        public void AddChoicePort(DialogueNode dialogueNode, string overridenPortName)
+        public void AddChoicePort(DialogueNode dialogueNode,string overridenPortName,DialogueCondition savedCondition = null)
         {
             var outputPortCount = dialogueNode.outputContainer.Query("connector").ToList().Count;
             
@@ -138,6 +139,12 @@ namespace DialogueSystem.Editor
                 ? $"Choice {outputPortCount+1}" 
                 : overridenPortName;
 
+            var choiceIndex = outputPortCount;
+
+            var condition = savedCondition ?? new DialogueCondition();
+
+            dialogueNode.ChoiceConditions.Add(condition);
+
             var textField = new TextField
             {
                 name = string.Empty,
@@ -148,6 +155,69 @@ namespace DialogueSystem.Editor
         
             var choiceContainer = new VisualElement();
             choiceContainer.AddToClassList("choice-container");
+
+            var conditionToggle = new Toggle("Has Condition")
+            {
+            value = condition.Enabled
+            };
+
+            conditionToggle.AddToClassList("toggle");
+
+            var variableField = new TextField("Variable")
+            {
+                value = string.IsNullOrEmpty(condition.VariableName)
+                    ? "VariableName"
+                    : condition.VariableName
+            };
+
+            variableField.RegisterValueChangedCallback(evt =>
+            {
+                condition.VariableName = evt.newValue;
+            });
+
+            var operatorField = new EnumField(
+                "Operator",
+                condition.Operator
+            );
+
+            operatorField.RegisterValueChangedCallback(evt =>
+            {
+                condition.Operator =
+                    (DialogueCondition.ComparisonOperator)evt.newValue;
+            });
+
+            var valueField = new TextField("Value")
+            {
+                value = string.IsNullOrEmpty(condition.ComparisonValue)
+                    ? "0"
+                    : condition.ComparisonValue
+            };
+
+            valueField.RegisterValueChangedCallback(evt =>
+            {
+                condition.ComparisonValue = evt.newValue;
+            });
+
+            var initialDisplayStyle = condition.Enabled
+                ? DisplayStyle.Flex
+                : DisplayStyle.None;
+
+            variableField.style.display = initialDisplayStyle;
+            operatorField.style.display = initialDisplayStyle;
+            valueField.style.display = initialDisplayStyle;
+
+            conditionToggle.RegisterValueChangedCallback(evt =>
+            {
+                condition.Enabled = evt.newValue;
+
+                var displayStyle = evt.newValue
+                    ? DisplayStyle.Flex
+                    : DisplayStyle.None;
+
+                variableField.style.display = displayStyle;
+                operatorField.style.display = displayStyle;
+                valueField.style.display = displayStyle;
+            });
         
             textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
             var deleteButton = new Button(() => RemovePort(dialogueNode, generatedPort)) { text = "Remove" };
@@ -157,6 +227,10 @@ namespace DialogueSystem.Editor
 
             choiceContainer.Add(textField);
             choiceContainer.Add(deleteButton);
+            choiceContainer.Add(conditionToggle);
+            choiceContainer.Add(variableField);
+            choiceContainer.Add(operatorField);
+            choiceContainer.Add(valueField);
             choiceContainer.Add(clickableLabel);
             generatedPort.contentContainer.Add(choiceContainer);
 
@@ -167,19 +241,27 @@ namespace DialogueSystem.Editor
             RefreshNode(dialogueNode);
         }
 
-        private void RemovePort(Node dialogueNode, Port generatedPort)
+        private void RemovePort(DialogueNode dialogueNode, Port generatedPort)
         {
+            var choiceIndex = dialogueNode.outputContainer.IndexOf(generatedPort);
+
             var targetEdge = edges.ToList()
                 .Where(x => x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);
 
+
             dialogueNode.outputContainer.Remove(generatedPort);
+
+            if (choiceIndex >= 0 && choiceIndex < dialogueNode.ChoiceConditions.Count)
+            {
+                dialogueNode.ChoiceConditions.RemoveAt(choiceIndex);
+            }
 
             var enumerable = targetEdge.ToList();
             if (enumerable.Any())
             {
                 var edge = enumerable.First();
                 edge.input.Disconnect(edge);
-                RemoveElement(enumerable.First());
+                RemoveElement(edge);
             }
             
             RefreshNode(dialogueNode);

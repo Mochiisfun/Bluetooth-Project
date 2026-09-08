@@ -35,12 +35,17 @@ namespace DialogueSystem.Editor
             {
                 var outputNode = edge.output.node as DialogueNode;
                 var inputNode = edge.input.node as DialogueNode;
+                var choiceIndex = outputNode.outputContainer.IndexOf(edge.output);
 
                 dialogueContainer.NodeLinks.Add(new NodeLinkData
                 {
                     BaseNodeGuid = outputNode!.Guid,
                     PortName = edge.output.portName,
-                    TargetNodeGuid = inputNode!.Guid
+                    TargetNodeGuid = inputNode!.Guid,
+                    Condition = choiceIndex >= 0 && 
+                                choiceIndex < outputNode.ChoiceConditions.Count 
+                        ? outputNode.ChoiceConditions[choiceIndex]
+                        : null
                 });
             }
 
@@ -156,7 +161,7 @@ namespace DialogueSystem.Editor
                 }
 
                 var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
-                nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
+                nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName, x.Condition));
             }
         }
 

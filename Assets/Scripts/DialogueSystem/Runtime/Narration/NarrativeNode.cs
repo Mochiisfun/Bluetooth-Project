@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-
+using DialogueSystem.Runtime;
 namespace DialogueSystem.Runtime.Narration
 {
     public class NarrativeNode
@@ -32,9 +32,9 @@ namespace DialogueSystem.Runtime.Narration
             DisableAlreadyChosenOptions = disableAlreadyChosenOptions;
         }
     
-        public void AddOption(string newOption, NarrativeNode targetNode)
+        public void AddOption(string newOption, NarrativeNode targetNode, DialogueCondition condition)
         {
-            var option = new DialogueOption(newOption, targetNode);
+            var option = new DialogueOption(newOption, targetNode, condition);
             Options.Add(option);
         }
 

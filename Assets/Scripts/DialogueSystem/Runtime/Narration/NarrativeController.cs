@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DialogueSystem.Data;
 using DialogueSystem.Runtime.Command;
 using DialogueSystem.Runtime.Interaction;
@@ -176,7 +177,8 @@ namespace DialogueSystem.Runtime.Narration
         private void SetupDialogueOptions()
         {
             IsChoosing = true;
-            narrativeUI.DisplayOptions(_currentNarrative.Options, _currentNarrative.DisableAlreadyChosenOptions, ChooseNarrativePath);
+            var availableOptions = _currentNarrative.Options.Where(option => option.Condition == null || !option.Condition.Enabled || option.Condition.IsMet()).ToList();
+            narrativeUI.DisplayOptions(availableOptions, _currentNarrative.DisableAlreadyChosenOptions, ChooseNarrativePath);
         }
         
         private CharacterData GetCharacter(string characterName)
