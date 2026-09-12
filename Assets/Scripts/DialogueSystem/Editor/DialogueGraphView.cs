@@ -87,6 +87,7 @@ namespace DialogueSystem.Editor
             SetupStyleSheet(dialogueNode);
 
             CreatePort(dialogueNode, Direction.Input);
+            CreateFallbackPort(dialogueNode);
 
             var openDialogueButton = new Button(() =>
             {
@@ -126,7 +127,7 @@ namespace DialogueSystem.Editor
 
         public void AddChoicePort(DialogueNode dialogueNode,string overridenPortName,DialogueCondition savedCondition = null)
         {
-            var outputPortCount = dialogueNode.outputContainer.Query("connector").ToList().Count;
+            var outputPortCount = dialogueNode.outputContainer.Query<Port>().ToList().Count - 1;
             
             if(outputPortCount >= 5) return;
             
@@ -241,9 +242,18 @@ namespace DialogueSystem.Editor
             RefreshNode(dialogueNode);
         }
 
+        private static void CreateFallbackPort(DialogueNode dialogueNode)
+        {
+            var fallbackPort = GeneratePort(dialogueNode, Direction.Output);
+
+            fallbackPort.portName = "Fallback";
+
+            dialogueNode.outputContainer.Add(fallbackPort);
+        }
+
         private void RemovePort(DialogueNode dialogueNode, Port generatedPort)
         {
-            var choiceIndex = dialogueNode.outputContainer.IndexOf(generatedPort);
+            var choiceIndex = dialogueNode.outputContainer.Query<Port>().ToList().IndexOf(generatedPort) - 1;
 
             var targetEdge = edges.ToList()
                 .Where(x => x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);

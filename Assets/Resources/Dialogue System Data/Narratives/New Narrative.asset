@@ -22,7 +22,7 @@ MonoBehaviour:
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
   - <BaseNodeGuid>k__BackingField: 9d0cf37b-bf9a-41af-8341-ae09a1fbb1e2
-    <PortName>k__BackingField: Choice 1
+    <PortName>k__BackingField: MayaAffection 20+
     <TargetNodeGuid>k__BackingField: e2f66647-18f4-4c4c-9cf6-917d26e43409
     <Condition>k__BackingField:
       <VariableName>k__BackingField: MayaAffection
@@ -30,13 +30,61 @@ MonoBehaviour:
       <ComparisonValue>k__BackingField: 20
       <Enabled>k__BackingField: 1
   - <BaseNodeGuid>k__BackingField: 9d0cf37b-bf9a-41af-8341-ae09a1fbb1e2
-    <PortName>k__BackingField: Choice 2
-    <TargetNodeGuid>k__BackingField: 810d9942-94f9-4422-b344-ee9930fd715b
+    <PortName>k__BackingField: Fallback
+    <TargetNodeGuid>k__BackingField: 80e81b41-5c3c-49db-91a8-25bf39e57133
     <Condition>k__BackingField:
       <VariableName>k__BackingField: 
       <Operator>k__BackingField: 0
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 80e81b41-5c3c-49db-91a8-25bf39e57133
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: ed7b3247-1041-4cf1-a27a-bc1dd2b4db10
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: a8582c29-d732-4b69-8475-a2ab16bf2c22
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: f3eef21e-18be-4c9a-ac92-856dff8c95d7
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: ed7b3247-1041-4cf1-a27a-bc1dd2b4db10
+    <PortName>k__BackingField: Fallback
+    <TargetNodeGuid>k__BackingField: f8eef17a-50ec-41a5-83ce-2ff0d80eff50
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: ed7b3247-1041-4cf1-a27a-bc1dd2b4db10
+    <PortName>k__BackingField: MayaAffection 20+
+    <TargetNodeGuid>k__BackingField: a8582c29-d732-4b69-8475-a2ab16bf2c22
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: MayaAffection
+      <Operator>k__BackingField: 4
+      <ComparisonValue>k__BackingField: 20
+      <Enabled>k__BackingField: 1
+  - <BaseNodeGuid>k__BackingField: f3eef21e-18be-4c9a-ac92-856dff8c95d7
+    <PortName>k__BackingField: MayaAffection 20+
+    <TargetNodeGuid>k__BackingField: b637f8dd-9ce2-48a1-816e-50c59a7caff8
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: MayaAffection
+      <Operator>k__BackingField: 4
+      <ComparisonValue>k__BackingField: 20
+      <Enabled>k__BackingField: 1
+  - <BaseNodeGuid>k__BackingField: f3eef21e-18be-4c9a-ac92-856dff8c95d7
+    <PortName>k__BackingField: MayaAffection 15+
+    <TargetNodeGuid>k__BackingField: b181b7b1-f48a-4631-9da8-74731ce8702e
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: MayaAffection
+      <Operator>k__BackingField: 4
+      <ComparisonValue>k__BackingField: 15
+      <Enabled>k__BackingField: 1
   <DialogueNodeData>k__BackingField:
   - guid: 05c7b705-312e-4aff-9740-f426113fe2d4
     dialogue: []
@@ -45,23 +93,137 @@ MonoBehaviour:
     entryPoint: 1
     isCheckpoint: 0
     disableAlreadyChosenOptions: 0
-  - guid: 9d0cf37b-bf9a-41af-8341-ae09a1fbb1e2
-    dialogue: []
-    position: {x: 269, y: 204}
-    transitionNode: 0
-    entryPoint: 0
-    isCheckpoint: 0
-    disableAlreadyChosenOptions: 0
-  - guid: 810d9942-94f9-4422-b344-ee9930fd715b
-    dialogue: []
-    position: {x: 1462, y: 315}
+  - guid: e2f66647-18f4-4c4c-9cf6-917d26e43409
+    dialogue:
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: Condition met (Bug)
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1521, y: 249}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
     disableAlreadyChosenOptions: 0
-  - guid: e2f66647-18f4-4c4c-9cf6-917d26e43409
-    dialogue: []
-    position: {x: 1462, y: 142}
+  - guid: 9d0cf37b-bf9a-41af-8341-ae09a1fbb1e2
+    dialogue:
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: set MayaAfftion to 15 <set:MayaAffection:15>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: Fallback Check <p:short>.<p:long>.<p:long>.<p:long>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 234, y: 198}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 80e81b41-5c3c-49db-91a8-25bf39e57133
+    dialogue:
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: Fallback true
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1499, y: 137}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: f8eef17a-50ec-41a5-83ce-2ff0d80eff50
+    dialogue:
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: Fallback true (Bug)
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 3036, y: 136}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: a8582c29-d732-4b69-8475-a2ab16bf2c22
+    dialogue:
+    - <CharacterName>k__BackingField: 'test '
+      <Content>k__BackingField: Condition met
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 3022, y: 249}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: ed7b3247-1041-4cf1-a27a-bc1dd2b4db10
+    dialogue:
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: set MayaAfftion to 30 <set:MayaAffection:30>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: Fallback Check <p:short>.<p:long>.<p:long>.<p:long>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1790, y: 138}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: f3eef21e-18be-4c9a-ac92-856dff8c95d7
+    dialogue:
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: set MayaAfftion to 10 <set:MayaAffection:10>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: Fallback Check <p:short>.<p:long>.<p:long>.<p:long>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 3302, y: 192}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: b181b7b1-f48a-4631-9da8-74731ce8702e
+    dialogue:
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: condition met (bug)
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 4533, y: 317}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: b637f8dd-9ce2-48a1-816e-50c59a7caff8
+    dialogue:
+    - <CharacterName>k__BackingField: test
+      <Content>k__BackingField: Condition met (bug)
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 4539, y: 182}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0

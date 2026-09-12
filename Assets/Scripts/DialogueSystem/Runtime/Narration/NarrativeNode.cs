@@ -7,7 +7,7 @@ namespace DialogueSystem.Runtime.Narration
         public List<DialogueMessage> Dialogue { get; }
         public string NodeId { get; }
         public List<DialogueOption> Options { get; }
-        public NarrativeNode DefaultPath { get; }
+        public NarrativeNode DefaultPath { get; private set; }
         public bool IsCheckpoint { get; }
         public bool DisableAlreadyChosenOptions { get;  }
 
@@ -30,6 +30,11 @@ namespace DialogueSystem.Runtime.Narration
             DefaultPath = null;
             IsCheckpoint = false;
             DisableAlreadyChosenOptions = disableAlreadyChosenOptions;
+        }
+
+        public void SetDefaultPath(NarrativeNode defaultPath)
+        {
+            DefaultPath = defaultPath;
         }
     
         public void AddOption(string newOption, NarrativeNode targetNode, DialogueCondition condition)

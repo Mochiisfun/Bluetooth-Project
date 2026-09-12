@@ -40,6 +40,8 @@ namespace DialogueSystem.Runtime.Narration
         private NarrativeNode _currentNarrative;
         private Queue<DialogueMessage> _narrativeQueue;
         private Narrative _narrative;
+        private bool _waitingForFallback;
+        private bool _waitingForDialogueFinish;
 
         private const string PathSeparator = ".";
 
@@ -113,14 +115,28 @@ namespace DialogueSystem.Runtime.Narration
         public void NextNarrative()
         {
             IsChoosing = false;
+
             if (narrativeUI.IsMessageDisplaying())
             {
                 SkipCurrentMessage();
                 LogHandler.Log("Skip", LogHandler.Color.Yellow);
                 return;
             }
-        
+
+            if (_waitingForFallback)
+            {
+                _waitingForFallback = false;
+                StartNewDialogue(_currentNarrative.DefaultPath);
+                return;
+            }
+
             ContinueNarrative();
+            if (_waitingForDialogueFinish)
+            {
+                _waitingForDialogueFinish = false;
+                FinishDialogue();
+                return;
+            }
         }
 
         private void ContinueNarrative()
@@ -178,6 +194,19 @@ namespace DialogueSystem.Runtime.Narration
         {
             IsChoosing = true;
             var availableOptions = _currentNarrative.Options.Where(option => option.Condition == null || !option.Condition.Enabled || option.Condition.IsMet()).ToList();
+            if (availableOptions.Count == 0)
+            {
+                IsChoosing = false;
+
+                if (_currentNarrative.DefaultPath != null)
+                {
+                    _waitingForFallback = true;
+                    return;
+                }
+
+                _waitingForDialogueFinish = true;
+                return;
+            }
             narrativeUI.DisplayOptions(availableOptions, _currentNarrative.DisableAlreadyChosenOptions, ChooseNarrativePath);
         }
         

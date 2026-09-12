@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using DialogueSystem.Data;
+using DialogueSystem.Runtime;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -35,17 +36,33 @@ namespace DialogueSystem.Editor
             {
                 var outputNode = edge.output.node as DialogueNode;
                 var inputNode = edge.input.node as DialogueNode;
-                var choiceIndex = outputNode.outputContainer.IndexOf(edge.output);
+                var isFallback = edge.output.portName == "Fallback";
+
+                DialogueCondition condition = null;
+
+                if (!isFallback)
+                {
+                    var choicePorts = outputNode.outputContainer
+                    .Query<Port>()
+                    .ToList()
+                    .Where(port => port.portName != "Fallback")
+                    .ToList();
+
+                var choiceIndex = choicePorts.IndexOf(edge.output);
+
+                if (choiceIndex >= 0 &&
+                    choiceIndex < outputNode.ChoiceConditions.Count)
+                {
+                    condition = outputNode.ChoiceConditions[choiceIndex];
+                }
+                }
 
                 dialogueContainer.NodeLinks.Add(new NodeLinkData
                 {
                     BaseNodeGuid = outputNode!.Guid,
                     PortName = edge.output.portName,
                     TargetNodeGuid = inputNode!.Guid,
-                    Condition = choiceIndex >= 0 && 
-                                choiceIndex < outputNode.ChoiceConditions.Count 
-                        ? outputNode.ChoiceConditions[choiceIndex]
-                        : null
+                    Condition = condition
                 });
             }
 
@@ -112,15 +129,27 @@ namespace DialogueSystem.Editor
         {
             foreach (var currentNode in Nodes)
             {
-                var node = currentNode;
-                var connections = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == node.Guid).ToList();
-  
-                for (var j = 0; j < connections.Count; j++)
-                {
-                    var targetNodeGuid = connections[j].TargetNodeGuid;
-                    var targetNode = Nodes.Find(x => x.Guid == targetNodeGuid);
+                var connections = _containerCache.NodeLinks
+                    .Where(x => x.BaseNodeGuid == currentNode.Guid)
+                    .ToList();
 
-                    LinkNodes(currentNode.outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
+                foreach (var connection in connections)
+                {
+                    var targetNode = Nodes.Find(x => x.Guid == connection.TargetNodeGuid);
+
+                    if (targetNode == null)
+                    {
+                        continue;
+                    }
+
+                    var outputPort = currentNode.outputContainer.Query<Port>().ToList().Find(port => port.portName == connection.PortName);
+
+                    if (outputPort == null)
+                    {
+                        continue;
+                    }
+
+                    LinkNodes(outputPort, (Port)targetNode.inputContainer[0]);
                 }
             }
         }
@@ -160,7 +189,8 @@ namespace DialogueSystem.Editor
                     continue;
                 }
 
-                var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
+                var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid && x.PortName != "Fallback").ToList();
+
                 nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName, x.Condition));
             }
         }

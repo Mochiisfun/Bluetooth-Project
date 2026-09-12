@@ -3,6 +3,7 @@ using DialogueSystem.Runtime.Narration;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
 
 namespace DialogueSystem.Runtime.Interaction
 {
@@ -19,7 +20,7 @@ namespace DialogueSystem.Runtime.Interaction
         
         [SerializeField] protected DialogueContainer narrativeScriptableObject;
         [SerializeField] protected NarrativeController narrativeController;
-        [SerializeField] protected KeyCode skipInput = KeyCode.Space;
+        [SerializeField] protected Key skipInput = Key.Space;
         [SerializeField] protected DialogueEvent[] dialogueEvents;
         
         /// <summary>
@@ -27,7 +28,8 @@ namespace DialogueSystem.Runtime.Interaction
         /// </summary>
         protected void SkipDialogueWithInput()
         {
-            if (!Input.GetKeyDown(skipInput) || narrativeController.IsChoosing ||
+            if (!Keyboard.current[skipInput].wasPressedThisFrame ||
+                narrativeController.IsChoosing ||
                 !narrativeController.IsNarrating)
             {
                 return;

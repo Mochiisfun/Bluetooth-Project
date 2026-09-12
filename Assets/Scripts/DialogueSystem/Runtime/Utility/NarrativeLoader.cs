@@ -80,15 +80,24 @@ namespace DialogueSystem.Runtime.Utility
         {
             var choiceNode = new NarrativeNode(dialogue, node.Guid, node.DisableAlreadyChosenOptions);
 
-            var options = narrativeToLoad.NodeLinks.Where(x => x.BaseNodeGuid == node.Guid).ToList();
+            var options = narrativeToLoad.NodeLinks.Where(x => x.BaseNodeGuid == node.Guid && x.PortName != "Fallback").ToList();
+
+            var fallbackLink = narrativeToLoad.NodeLinks.Find(x => x.BaseNodeGuid == node.Guid && x.PortName == "Fallback");
 
             narrative.AddNarrativeNode(choiceNode);
 
             options.ForEach(option =>
             {
-                var nextNode = narrativeToLoad.DialogueNodeData.Find(dialogueNode => option.TargetNodeGuid == dialogueNode.Guid);
-                choiceNode.AddOption(option.PortName, CreateNextNode(nextNode, narrative), option.Condition);
+            var nextNode = narrativeToLoad.DialogueNodeData.Find(dialogueNode => option.TargetNodeGuid == dialogueNode.Guid);
+            choiceNode.AddOption(option.PortName, CreateNextNode(nextNode, narrative), option.Condition);
             });
+
+            if (fallbackLink != null)
+            {
+                var fallbackNode = narrativeToLoad.DialogueNodeData.Find(dialogueNode => fallbackLink.TargetNodeGuid == dialogueNode.Guid);
+
+                choiceNode.SetDefaultPath(CreateNextNode(fallbackNode, narrative));
+            }
 
             return choiceNode;
         }
