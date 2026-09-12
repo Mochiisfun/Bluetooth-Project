@@ -21,12 +21,20 @@ namespace DialogueSystem.Runtime.UI
         [SerializeField] private List<RectTransform> optionButtonPositions;
         [SerializeField] private Button nextMessageButton;
 
+        [Space, Header("Dialogue Log")]
+        [SerializeField] private DialogueLogUI dialogueLogUI;
+
         [Space, Header("UI Rendering")]
         [SerializeField] private Optional<Image> characterSprite;
         [SerializeField] private Image dialogueBubble;
     
         private List<Button> _currentOptionButtonList;
         private bool _textTyperNotNull;
+        private readonly DialogueLog _dialogueLog = new();
+
+        public IReadOnlyList<DialogueLogEntry> LogEntries => _dialogueLog.Entries;
+
+        private string _currentSpeakerName;
     
         private void Awake()
         {
@@ -98,17 +106,27 @@ namespace DialogueSystem.Runtime.UI
     
         public override void DisplayDialogueBubble(DialogueMessage messageData, CharacterData characterData)
         {
+            _currentSpeakerName = messageData.CharacterName;
+            
             DisplayCharacterName(messageData.CharacterName, messageData.HideCharacter);
             DisplayCharacter(characterData.DefaultState.CharacterFace, messageData.HideCharacter);
         }
 
         public override void DisplayMessage(string text)
         {
+            _dialogueLog.Add(_currentSpeakerName, text);
+
             messageTextContainer.text = text;
             if (textTyper)
             {
                 textTyper.TypeText(text, messageTextContainer);
             }
+        }
+
+        public void DisplayDialogueLog()
+        {
+            dialogueLogUI.DisplayLog(LogEntries);
+            dialogueLogUI.gameObject.SetActive(true);
         }
 
         public override void DisplayCharacter(Optional<Sprite> sprite, bool hideCharacter)
