@@ -21,17 +21,45 @@ namespace DialogueSystem.Data
     public class IntVariable : Variable
     {
         [SerializeField] internal int intValue;
+
+        [SerializeField] private bool useClamp;
+        [SerializeField] private int minValue;
+        [SerializeField] private int maxValue;
         
         public override object GetValue() => intValue;
 
         public override void SetValue(object newValue)
         {
-            try{
-                intValue = int.Parse(newValue.ToString());
+            try
+            {
+                int parsedValue = int.Parse(newValue.ToString());
+
+                if (useClamp)
+                {
+                    parsedValue = Mathf.Clamp(
+                        parsedValue,
+                        minValue,
+                        maxValue
+                    );
+                }
+
+                intValue = parsedValue;
             }
             catch (Exception e)
             {
                 LogHandler.Alert($"Error while parsing int value: {e.Message}");
+            }
+        }
+
+        public void ConfigureClamp(bool shouldClamp, int min, int max)
+        {
+            useClamp = shouldClamp;
+            minValue = min;
+            maxValue = max;
+
+            if (useClamp)
+            {
+                intValue = Mathf.Clamp(intValue, minValue, maxValue);
             }
         }
 
@@ -109,6 +137,8 @@ namespace DialogueSystem.Data
     
     public sealed class DialogueVariableData : EasyScriptableSingleton<DialogueVariableData>
     {
+        public event Action OnVariableChanged;
+
         protected override string PathToResources => "Assets/Resources";
         protected override string ResourcesPath => "Dialogue System Data/Dialogue";
         protected override string FileName => "DialogueVariableData";
@@ -334,6 +364,8 @@ namespace DialogueSystem.Data
             variable.SetValue(newValue);
 
             SaveRuntimeData();
+
+            OnVariableChanged?.Invoke();
         }
 
 
@@ -368,6 +400,34 @@ namespace DialogueSystem.Data
                     );
                     return;
             }
+
+            SaveRuntimeData();
+            
+            OnVariableChanged?.Invoke();
+        }
+
+        public void ConfigureIntClamp(
+            string variableName,
+            bool useClamp,
+            int minValue,
+            int maxValue)
+        {
+            var variable = variables.Find(v => v.Name == variableName);
+
+            if (variable is not IntVariable intVariable)
+            {
+                Debug.LogWarning(
+                    $"Cannot configure clamp for '{variableName}' because it is not an int variable."
+                );
+
+                return;
+            }
+
+            intVariable.ConfigureClamp(
+                useClamp,
+                minValue,
+                maxValue
+            );
 
             SaveRuntimeData();
         }

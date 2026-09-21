@@ -1,0 +1,531 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d50752db9e472b8d367dcf46cdbad8, type: 3}
+  m_Name: T_VT_DemoNarrative
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.Data.DialogueContainer
+  <NodeLinks>k__BackingField:
+  - <BaseNodeGuid>k__BackingField: 8d7f9eec-fe45-4325-9ef5-fb1e7d802ab7
+    <PortName>k__BackingField: Next
+    <TargetNodeGuid>k__BackingField: 55127156-7a33-4e36-bf7a-74d7936857e5
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 55127156-7a33-4e36-bf7a-74d7936857e5
+    <PortName>k__BackingField: '[Vtuber]'
+    <TargetNodeGuid>k__BackingField: 3d16eccf-9e07-4ddb-8e56-79e561763f2c
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 3d16eccf-9e07-4ddb-8e56-79e561763f2c
+    <PortName>k__BackingField: 'Sorry to keep you waiting. '
+    <TargetNodeGuid>k__BackingField: 68be2dc4-8928-4fbe-985a-97ddcd3cd7b5
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 3d16eccf-9e07-4ddb-8e56-79e561763f2c
+    <PortName>k__BackingField: Keep wacthing.
+    <TargetNodeGuid>k__BackingField: 24051103-0b19-41c6-8176-b84684ee84b5
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 3d16eccf-9e07-4ddb-8e56-79e561763f2c
+    <PortName>k__BackingField: LOOK, IS THAT A UFO?!
+    <TargetNodeGuid>k__BackingField: fda5bb10-c9de-44ec-a785-529fb38a3416
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 68be2dc4-8928-4fbe-985a-97ddcd3cd7b5
+    <PortName>k__BackingField: Her Boyfriend.
+    <TargetNodeGuid>k__BackingField: d9d135d9-8040-458f-b2dd-3cbec1ef931f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 68be2dc4-8928-4fbe-985a-97ddcd3cd7b5
+    <PortName>k__BackingField: Her Friend.
+    <TargetNodeGuid>k__BackingField: 53d158f4-45e3-481b-8daa-309739d29dfd
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: d9d135d9-8040-458f-b2dd-3cbec1ef931f
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: ff201828-9de8-495a-92da-951b20aaf55f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 53d158f4-45e3-481b-8daa-309739d29dfd
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: ff201828-9de8-495a-92da-951b20aaf55f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: ff201828-9de8-495a-92da-951b20aaf55f
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 7c26dfd3-c700-42fd-8fa5-406ae0955740
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: fda5bb10-c9de-44ec-a785-529fb38a3416
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: ff201828-9de8-495a-92da-951b20aaf55f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 24051103-0b19-41c6-8176-b84684ee84b5
+    <PortName>k__BackingField: Help her.
+    <TargetNodeGuid>k__BackingField: 754ad2f1-3073-4ffb-81aa-6a63a68cdb3c
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 24051103-0b19-41c6-8176-b84684ee84b5
+    <PortName>k__BackingField: Do nothing.
+    <TargetNodeGuid>k__BackingField: c0baa087-aa66-4af1-9687-a3987efdb1ae
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 754ad2f1-3073-4ffb-81aa-6a63a68cdb3c
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: ff201828-9de8-495a-92da-951b20aaf55f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: c0baa087-aa66-4af1-9687-a3987efdb1ae
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 7c26dfd3-c700-42fd-8fa5-406ae0955740
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  <DialogueNodeData>k__BackingField:
+  - guid: 8d7f9eec-fe45-4325-9ef5-fb1e7d802ab7
+    dialogue: []
+    position: {x: 100, y: 200}
+    transitionNode: 0
+    entryPoint: 1
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 55127156-7a33-4e36-bf7a-74d7936857e5
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'As you walk out of your apartment<p:short> you think
+        of what you should do next.<p:normal>
+
+        Which target should you choose? '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 235, y: 200}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 68be2dc4-8928-4fbe-985a-97ddcd3cd7b5
+    dialogue:
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: Sorry to keep you waiting. <add:VtuberAffection:5><add:VtuberSuspicion:-3>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: A Yanky looking guy
+      <Content>k__BackingField: 'Huh?<p:normal> Who are you? '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1475, y: 92}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 3d16eccf-9e07-4ddb-8e56-79e561763f2c
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: You decided to go and meet [Vtuber].<p:normal> You
+        call her and<p:short> it appear she is nearby.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You can see a Timid girl in her 20 waiting for someone.<p:normal>
+        She doesn''t appear to be dress up<p:short> or you could say it pretty much
+        a cloth you would wear at home. '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: "Though not because of her fashion or maybe because
+        of it.<p:normal> A lot of young man would occationally take a glance in her
+        direction.<p:normal> \nMaybe you should hurry a little."
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: A Yanky looking guy
+      <Content>k__BackingField: Sis,<p:short> Are you here alone?<p:normal> Why don't
+        we go have some coffee?<p:normal> I will pay for it.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: <em:surprised>U-<p:short>Uh<p:normal> Um<p:long>,
+        I<p:short>-I am waiting for someone<p:normal> <em:worry>So pls-
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: A Yanky looking guy
+      <Content>k__BackingField: Don't worry about it.<p:normal> It going to take
+        just a teeny tiny bit and you can come back later.<p:normal> What about it?
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: <em:worry>Uh-no<p:normal>, someone<p:short> please
+        help me...
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 833, y: 223}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 24051103-0b19-41c6-8176-b84684ee84b5
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: You keep wacthing to access the situation first.<p:normal>
+        but as you wacth the situation unfold you and her eyes meet each other. <add:VtuberAffection:-5><add:VtuberSuspicion:2>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: <em:scared>pls<p:long> help<p:long> me<p:long>.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1473, y: 270}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: d9d135d9-8040-458f-b2dd-3cbec1ef931f
+    dialogue:
+    - <CharacterName>k__BackingField: A Yanky looking guy
+      <Content>k__BackingField: '"Ok, Ok<p:normal>, you don''t have to look at me
+        like that.<p:normal> I am just an employee in a caffe right there.<p:normal>
+        If you want to take a break pls come by.
+
+        <add:VtuberAffection:10>"'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: <em:happy>He<p:tiny>he<p:normal>, I think<p:short>
+        there seem to be some kind of misunderstanding.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: Huh?<p:normal> So he?<p:normal> Uhh~<p:long> never
+        mind.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2056, y: 58}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 53d158f4-45e3-481b-8daa-309739d29dfd
+    dialogue:
+    - <CharacterName>k__BackingField: A Yanky looking guy
+      <Content>k__BackingField: Oh<p:normal>, Are you the one who she been waiting
+        for?<p:normal> You can have this too.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'He hand you a pamphlet which seem to be an advertisement
+        for a caffe nearby. '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: A Yanky looking guy
+      <Content>k__BackingField: If you have time<p:normal> pls come by.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2051, y: 163}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: ff201828-9de8-495a-92da-951b20aaf55f
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: Uh-<p:normal> Hi, there l<p:tiny>-long time no see.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2284, y: 455}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 754ad2f1-3073-4ffb-81aa-6a63a68cdb3c
+    dialogue:
+    - <CharacterName>k__BackingField: A Yanky looking guy
+      <Content>k__BackingField: Oh<p:normal>, Are you the one who she been waiting
+        for?<p:normal> You can have this too.<add:VtuberAffection:2><add:VtuberSuspicion:1>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'He hand you a pamphlet which seem to be an advertisement
+        for a caffe nearby. '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: A Yanky looking guy
+      <Content>k__BackingField: If you have time<p:normal> pls come by.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2052, y: 281}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: c0baa087-aa66-4af1-9687-a3987efdb1ae
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: You decided to do<p:short> nothing<p:normal> and
+        watch as she stumble her way thought the conversation.<p:normal> As helping
+        her would have hinder her growth as a person.<add:VtuberAffection:-10><add:VtuberSuspicion:15>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: After sometime has pass the man finally walk away
+        leaving her in a state of complete exhaustion.<p:normal> After a moment she
+        finally drag her exhausted body in you direction.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: 'So,<p:short> How was the conversation? '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: '<em:angry>You<p:normal> YOU<p:long> TRAITOR!!! '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: She walk away angrily.
+      <HideCharacter>k__BackingField: 1
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: But because it is not very fast you decide to slowly
+        walk after her.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2051, y: 385}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: fda5bb10-c9de-44ec-a785-529fb38a3416
+    dialogue:
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: LOOK<p:short>, IS THAT A UFO?!
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: A Yanky looking guy
+      <Content>k__BackingField: Huh?<p:normal> Where?<p:normal>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: As people started to look at the sky.<p:normal> You
+        grab her hand and run away.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: (Sighing heavily)<p:normal> I think We lost them.<p:normal>
+        Are you ok?<add:VtuberAffection:3><add:VtuberSuspicion:1>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: '<em:worry>I am<p:short> ugh<p:normal>-<p:tiny> fine.<p:normal>
+        But<p:short> can we rest for a bit? '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: Sure.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: You and the girl decided to rest for a bit before
+        continuing.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1475, y: 453}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 7c26dfd3-c700-42fd-8fa5-406ae0955740
+    dialogue:
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: Oh,<p:normal> so he wasn't hiting on you?
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: <em:surprised>Oh-no<p:normal>, he was handing me
+        this pamphlet.<p:normal><em:worry> And I don't really need it<p:short> <em:default>but
+        I don't know how to reject him.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: So<p:short> Um<p:normal>, Sorry for interrupting?
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: "\"<em:surprised>No need<p:normal>, <em:happy>I glad
+        you come to <em:embarrass>uh-<p:short> help me.<p:normal> <em:default>So<p:normal>,
+        \nWhy did you called me out?\""
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: Oh<p:normal>,I just want to hang out do you have
+        anywhere you want to go.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: <em:worry>Not realllly~<p:normal> <em:surprised>Oh<p:short>
+        I do have some new manga I want to check.<p:normal> <em:default>Can you come
+        with me to the book store?
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: Sure<p:normal>, I can also check out some book while
+        I am there too.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: You and the girl decided to go to the book store
+        to check out some new book.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: <em:worry>So<p:normal>, What kind of book do you
+        usually read?
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2537, y: 384}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  <PathToCheckpoint>k__BackingField: 
+  <IsNarrativeEndReached>k__BackingField: 0
+  <StartFromPreviousNarrativePath>k__BackingField: 1
+  <Characters>k__BackingField:
+  - {fileID: 11400000, guid: d49dcbc8fac012541a32eb252919d99c, type: 2}

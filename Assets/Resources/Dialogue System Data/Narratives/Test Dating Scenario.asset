@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d50752db9e472b8d367dcf46cdbad8, type: 3}
+  m_Name: Test Dating Scenario
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.Data.DialogueContainer
+  <NodeLinks>k__BackingField:
+  - <BaseNodeGuid>k__BackingField: 93196a84-8240-48b3-83f7-6ba1bf97fe40
+    <PortName>k__BackingField: Next
+    <TargetNodeGuid>k__BackingField: 7a7595ab-9368-4c13-a86d-fa3ed47c9048
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  <DialogueNodeData>k__BackingField:
+  - guid: 93196a84-8240-48b3-83f7-6ba1bf97fe40
+    dialogue: []
+    position: {x: 100, y: 200}
+    transitionNode: 0
+    entryPoint: 1
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 7a7595ab-9368-4c13-a86d-fa3ed47c9048
+    dialogue:
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: I don't really have anything better to do aren't
+        I
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: "as you walk out of your old apartment you hear a 
+        Creaking<p:short>\u2014 <p:long>"
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: <em:default>Huh?<p:long> <em:surprised>someone<p:normall>
+        still here.<p:long>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You see a lady coming out of the room next to you.
+
+        Perhap
+        she is the resident who live next to you. '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: You
+      <Content>k__BackingField: 'Err<p:long> Hello<p:short>, Good Morning. are you
+        perhap living nex-<p:long> '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: <em:surprised>H-<p:short>Hello<add:VtuberAffection:5><p:long>,
+        nice <p:tiny><em:worry>to meet you.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: P<p:short>-PLS, EXCUSE ME. <add:VtuberAffection:-10>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'She ran away. '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 263, y: 193}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  <PathToCheckpoint>k__BackingField: 
+  <IsNarrativeEndReached>k__BackingField: 0
+  <StartFromPreviousNarrativePath>k__BackingField: 1
+  <Characters>k__BackingField:
+  - {fileID: 11400000, guid: d49dcbc8fac012541a32eb252919d99c, type: 2}

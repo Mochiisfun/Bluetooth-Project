@@ -14,7 +14,8 @@
         Annoyed,
         Surprised,
         Curious,
-        Warm,
-        Evil
+        Worry,
+        Evil,
+        Embarrass
     }
 }

@@ -21,6 +21,12 @@ MonoBehaviour:
   - rid: 5062963137516404823
   - rid: 5062963137516404824
   - rid: 5062963137516404825
+  - rid: 5062963431830978628
+  - rid: 5062963431830978629
+  - rid: 5062963431830978630
+  - rid: 5062963431830978631
+  - rid: 5062963431830978632
+  - rid: 5062963431830978633
   references:
     version: 2
     RefIds:
@@ -34,6 +40,9 @@ MonoBehaviour:
       data:
         <Name>k__BackingField: cost_bread
         intValue: 1
+        useClamp: 0
+        minValue: 0
+        maxValue: 0
     - rid: 5062963122352423038
       type: {class: StringVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
@@ -44,16 +53,25 @@ MonoBehaviour:
       data:
         <Name>k__BackingField: Money
         intValue: 1750
+        useClamp: 0
+        minValue: 0
+        maxValue: 100
     - rid: 5062963137516404822
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: Day
         intValue: 1
+        useClamp: 0
+        minValue: 0
+        maxValue: 100
     - rid: 5062963137516404823
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: MayaAffection
         intValue: 15
+        useClamp: 0
+        minValue: 0
+        maxValue: 100
     - rid: 5062963137516404824
       type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
@@ -64,3 +82,51 @@ MonoBehaviour:
       data:
         <Name>k__BackingField: PlayerName
         stringValue: player
+    - rid: 5062963431830978628
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: VtuberAffection
+        intValue: 15
+        useClamp: 1
+        minValue: 0
+        maxValue: 100
+    - rid: 5062963431830978629
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: VtuberSuspicion
+        intValue: 87
+        useClamp: 1
+        minValue: 0
+        maxValue: 100
+    - rid: 5062963431830978630
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: OLAffection
+        intValue: 0
+        useClamp: 1
+        minValue: 0
+        maxValue: 100
+    - rid: 5062963431830978631
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: OLSuspicion
+        intValue: 0
+        useClamp: 1
+        minValue: 0
+        maxValue: 100
+    - rid: 5062963431830978632
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: CEOAffection
+        intValue: 0
+        useClamp: 1
+        minValue: 0
+        maxValue: 100
+    - rid: 5062963431830978633
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: CEOSuspicion
+        intValue: 0
+        useClamp: 1
+        minValue: 0
+        maxValue: 100
