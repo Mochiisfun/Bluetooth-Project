@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: DialogueVariableData
   m_EditorClassIdentifier: 
   variables:
-  - rid: 5062963122352423036
   - rid: 5062963122352423037
   - rid: 5062963122352423038
   - rid: 5062963137516404821
@@ -27,14 +26,11 @@ MonoBehaviour:
   - rid: 5062963431830978631
   - rid: 5062963431830978632
   - rid: 5062963431830978633
+  - rid: 6759035689954967620
+  - rid: 6759035689954967621
   references:
     version: 2
     RefIds:
-    - rid: 5062963122352423036
-      type: {class: FloatVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
-      data:
-        <Name>k__BackingField: cost_coffee
-        floatValue: 1.5
     - rid: 5062963122352423037
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
@@ -52,7 +48,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: Money
-        intValue: 1750
+        intValue: 7400
         useClamp: 0
         minValue: 0
         maxValue: 100
@@ -86,7 +82,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberAffection
-        intValue: 15
+        intValue: 50
         useClamp: 1
         minValue: 0
         maxValue: 100
@@ -94,7 +90,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberSuspicion
-        intValue: 87
+        intValue: 2
         useClamp: 1
         minValue: 0
         maxValue: 100
@@ -130,3 +126,13 @@ MonoBehaviour:
         useClamp: 1
         minValue: 0
         maxValue: 100
+    - rid: 6759035689954967620
+      type: {class: StringVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: CurrentRequestSize
+        stringValue: Little
+    - rid: 6759035689954967621
+      type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: LastRequestSuccess
+        boolValue: 1

@@ -15,15 +15,23 @@ MonoBehaviour:
   <NodeLinks>k__BackingField:
   - <BaseNodeGuid>k__BackingField: 8d7f9eec-fe45-4325-9ef5-fb1e7d802ab7
     <PortName>k__BackingField: Next
-    <TargetNodeGuid>k__BackingField: 55127156-7a33-4e36-bf7a-74d7936857e5
+    <TargetNodeGuid>k__BackingField: 3d16eccf-9e07-4ddb-8e56-79e561763f2c
     <Condition>k__BackingField:
       <VariableName>k__BackingField: 
       <Operator>k__BackingField: 0
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
-  - <BaseNodeGuid>k__BackingField: 55127156-7a33-4e36-bf7a-74d7936857e5
-    <PortName>k__BackingField: '[Vtuber]'
-    <TargetNodeGuid>k__BackingField: 3d16eccf-9e07-4ddb-8e56-79e561763f2c
+  - <BaseNodeGuid>k__BackingField: 68be2dc4-8928-4fbe-985a-97ddcd3cd7b5
+    <PortName>k__BackingField: Her Boyfriend.
+    <TargetNodeGuid>k__BackingField: d9d135d9-8040-458f-b2dd-3cbec1ef931f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 68be2dc4-8928-4fbe-985a-97ddcd3cd7b5
+    <PortName>k__BackingField: Her Friend.
+    <TargetNodeGuid>k__BackingField: 53d158f4-45e3-481b-8daa-309739d29dfd
     <Condition>k__BackingField:
       <VariableName>k__BackingField: 
       <Operator>k__BackingField: 0
@@ -53,17 +61,17 @@ MonoBehaviour:
       <Operator>k__BackingField: 0
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
-  - <BaseNodeGuid>k__BackingField: 68be2dc4-8928-4fbe-985a-97ddcd3cd7b5
-    <PortName>k__BackingField: Her Boyfriend.
-    <TargetNodeGuid>k__BackingField: d9d135d9-8040-458f-b2dd-3cbec1ef931f
+  - <BaseNodeGuid>k__BackingField: 24051103-0b19-41c6-8176-b84684ee84b5
+    <PortName>k__BackingField: Help her.
+    <TargetNodeGuid>k__BackingField: 754ad2f1-3073-4ffb-81aa-6a63a68cdb3c
     <Condition>k__BackingField:
       <VariableName>k__BackingField: 
       <Operator>k__BackingField: 0
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
-  - <BaseNodeGuid>k__BackingField: 68be2dc4-8928-4fbe-985a-97ddcd3cd7b5
-    <PortName>k__BackingField: Her Friend.
-    <TargetNodeGuid>k__BackingField: 53d158f4-45e3-481b-8daa-309739d29dfd
+  - <BaseNodeGuid>k__BackingField: 24051103-0b19-41c6-8176-b84684ee84b5
+    <PortName>k__BackingField: Do nothing.
+    <TargetNodeGuid>k__BackingField: c0baa087-aa66-4af1-9687-a3987efdb1ae
     <Condition>k__BackingField:
       <VariableName>k__BackingField: 
       <Operator>k__BackingField: 0
@@ -93,30 +101,6 @@ MonoBehaviour:
       <Operator>k__BackingField: 0
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
-  - <BaseNodeGuid>k__BackingField: fda5bb10-c9de-44ec-a785-529fb38a3416
-    <PortName>k__BackingField: Output
-    <TargetNodeGuid>k__BackingField: ff201828-9de8-495a-92da-951b20aaf55f
-    <Condition>k__BackingField:
-      <VariableName>k__BackingField: 
-      <Operator>k__BackingField: 0
-      <ComparisonValue>k__BackingField: 
-      <Enabled>k__BackingField: 0
-  - <BaseNodeGuid>k__BackingField: 24051103-0b19-41c6-8176-b84684ee84b5
-    <PortName>k__BackingField: Help her.
-    <TargetNodeGuid>k__BackingField: 754ad2f1-3073-4ffb-81aa-6a63a68cdb3c
-    <Condition>k__BackingField:
-      <VariableName>k__BackingField: 
-      <Operator>k__BackingField: 0
-      <ComparisonValue>k__BackingField: 
-      <Enabled>k__BackingField: 0
-  - <BaseNodeGuid>k__BackingField: 24051103-0b19-41c6-8176-b84684ee84b5
-    <PortName>k__BackingField: Do nothing.
-    <TargetNodeGuid>k__BackingField: c0baa087-aa66-4af1-9687-a3987efdb1ae
-    <Condition>k__BackingField:
-      <VariableName>k__BackingField: 
-      <Operator>k__BackingField: 0
-      <ComparisonValue>k__BackingField: 
-      <Enabled>k__BackingField: 0
   - <BaseNodeGuid>k__BackingField: 754ad2f1-3073-4ffb-81aa-6a63a68cdb3c
     <PortName>k__BackingField: Output
     <TargetNodeGuid>k__BackingField: ff201828-9de8-495a-92da-951b20aaf55f
@@ -133,28 +117,44 @@ MonoBehaviour:
       <Operator>k__BackingField: 0
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: fda5bb10-c9de-44ec-a785-529fb38a3416
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: ff201828-9de8-495a-92da-951b20aaf55f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 7c26dfd3-c700-42fd-8fa5-406ae0955740
+    <PortName>k__BackingField: Fallback
+    <TargetNodeGuid>k__BackingField: 30c25006-9da5-4198-87db-fc9f17848fe4
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 30c25006-9da5-4198-87db-fc9f17848fe4
+    <PortName>k__BackingField: No
+    <TargetNodeGuid>k__BackingField: 336ebba7-62c0-4879-af05-b8a22dc46c3e
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 30c25006-9da5-4198-87db-fc9f17848fe4
+    <PortName>k__BackingField: Yes
+    <TargetNodeGuid>k__BackingField: 42a61da3-dcb7-41e1-bc86-2f1a93c42cb9
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
   <DialogueNodeData>k__BackingField:
   - guid: 8d7f9eec-fe45-4325-9ef5-fb1e7d802ab7
     dialogue: []
     position: {x: 100, y: 200}
     transitionNode: 0
     entryPoint: 1
-    isCheckpoint: 0
-    disableAlreadyChosenOptions: 0
-  - guid: 55127156-7a33-4e36-bf7a-74d7936857e5
-    dialogue:
-    - <CharacterName>k__BackingField: 
-      <Content>k__BackingField: 'As you walk out of your apartment<p:short> you think
-        of what you should do next.<p:normal>
-
-        Which target should you choose? '
-      <HideCharacter>k__BackingField: 0
-      <DialogueEvent>k__BackingField:
-        m_PersistentCalls:
-          m_Calls: []
-    position: {x: 235, y: 200}
-    transitionNode: 0
-    entryPoint: 0
     isCheckpoint: 0
     disableAlreadyChosenOptions: 0
   - guid: 68be2dc4-8928-4fbe-985a-97ddcd3cd7b5
@@ -171,7 +171,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1475, y: 92}
+    position: {x: 881, y: 67}
     transitionNode: 0
     entryPoint: 0
     isCheckpoint: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 833, y: 223}
+    position: {x: 239, y: 198}
     transitionNode: 0
     entryPoint: 0
     isCheckpoint: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1473, y: 270}
+    position: {x: 879, y: 245}
     transitionNode: 0
     entryPoint: 0
     isCheckpoint: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 2056, y: 58}
+    position: {x: 1462, y: 33}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 2051, y: 163}
+    position: {x: 1457, y: 138}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 2284, y: 455}
+    position: {x: 1690, y: 430}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 2052, y: 281}
+    position: {x: 1458, y: 256}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 2051, y: 385}
+    position: {x: 1457, y: 360}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 1475, y: 453}
+    position: {x: 881, y: 428}
     transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
@@ -519,8 +519,47 @@ MonoBehaviour:
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:
           m_Calls: []
-    position: {x: 2537, y: 384}
+    position: {x: 1943, y: 359}
     transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 30c25006-9da5-4198-87db-fc9f17848fe4
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: Should you ask for money?
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2323, y: 358}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 336ebba7-62c0-4879-af05-b8a22dc46c3e
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: Let end it here to day.<event:MoneyRequestOff>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2911, y: 439}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 42a61da3-dcb7-41e1-bc86-2f1a93c42cb9
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: How much should you ask for? <event:MoneyRequestOn>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2911, y: 320}
+    transitionNode: 1
     entryPoint: 0
     isCheckpoint: 0
     disableAlreadyChosenOptions: 0
