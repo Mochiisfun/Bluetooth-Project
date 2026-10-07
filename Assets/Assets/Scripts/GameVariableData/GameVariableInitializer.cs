@@ -25,6 +25,11 @@ public class GameVariableInitializer : MonoBehaviour
         [SerializeField] private string stringValue;
         [SerializeField] private bool boolValue;
 
+        [Header("Optional Int Clamp")]
+        [SerializeField] private bool useIntClamp;
+        [SerializeField] private int minIntValue = 0;
+        [SerializeField] private int maxIntValue = 100;
+
         public string VariableName => variableName;
         public VariableType Type => variableType;
 
@@ -32,6 +37,10 @@ public class GameVariableInitializer : MonoBehaviour
         public float FloatValue => floatValue;
         public string StringValue => stringValue;
         public bool BoolValue => boolValue;
+
+        public bool UseIntClamp => useIntClamp;
+        public int MinIntValue => minIntValue;
+        public int MaxIntValue => maxIntValue;
     }
 
     [Header("Starting Game Variables")]
@@ -58,10 +67,12 @@ public class GameVariableInitializer : MonoBehaviour
             if (DialogueVariableData.Instance.Exists(variable.VariableName))
             {
                 CheckVariableType(variable);
+                ConfigureIntClamp(variable);
                 continue;
             }
 
             CreateVariable(variable);
+            ConfigureIntClamp(variable);
         }
     }
 
@@ -125,5 +136,20 @@ public class GameVariableInitializer : MonoBehaviour
                 $"found {existingType?.Name}."
             );
         }
+    }
+
+    private void ConfigureIntClamp(StartingVariable variable)
+    {
+        if (variable.Type != VariableType.Int)
+        {
+            return;
+        }
+
+        DialogueVariableData.Instance.ConfigureIntClamp(
+            variable.VariableName,
+            variable.UseIntClamp,
+            variable.MinIntValue,
+            variable.MaxIntValue
+        );
     }
 }

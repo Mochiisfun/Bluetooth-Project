@@ -22,6 +22,7 @@ namespace DialogueSystem.Runtime.UI
         [SerializeField] private Button nextMessageButton;
 
         [Space, Header("Dialogue Log")]
+        [SerializeField] private Button logButton;
         [SerializeField] private DialogueLogUI dialogueLogUI;
 
         [Space, Header("UI Rendering")]
@@ -149,6 +150,7 @@ namespace DialogueSystem.Runtime.UI
             messageTextContainer.gameObject.SetActive(active);
             buttonsParent.gameObject.SetActive(active);
             nextMessageButton.gameObject.SetActive(active);
+            logButton.gameObject.SetActive(active);
             dialogueBubble.gameObject.SetActive(active);
             characterSprite.Value.gameObject.SetActive(active);
         }

@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a856104a895dc44bad575fdc4d698b, type: 3}
+  m_Name: VtuberCharacterScriptableObject 1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.Data.CharacterData
+  characterName: Vtuber
+  speakingSound: {fileID: 8300000, guid: dec0dd068984f0c419c26b79302cd356, type: 3}
+  defaultState:
+    emotionLabel: 0
+    speakingSoundPitch: 1
+    reactionSound:
+      enabled: 0
+      value: {fileID: 0}
+    characterFace:
+      enabled: 1
+      value: {fileID: -6594197625193702467, guid: 1e67e64d39bbbb14992460f7f8c72160, type: 3}
+  states:
+  - emotionLabel: 2
+    speakingSoundPitch: 1
+    reactionSound:
+      enabled: 0
+      value: {fileID: 0}
+    characterFace:
+      enabled: 1
+      value: {fileID: -4443561769981956324, guid: 07f6bf44aa0c900449929dd85c37107a, type: 3}
+  - emotionLabel: 4
+    speakingSoundPitch: 1
+    reactionSound:
+      enabled: 0
+      value: {fileID: 0}
+    characterFace:
+      enabled: 1
+      value: {fileID: 7585004457853363654, guid: 3673605abd80ce844853fbdd87056380, type: 3}
+  - emotionLabel: 10
+    speakingSoundPitch: 1
+    reactionSound:
+      enabled: 0
+      value: {fileID: 0}
+    characterFace:
+      enabled: 1
+      value: {fileID: 7840707906179553851, guid: 93cc706d1179c594b9b8dcfcea4bc5dc, type: 3}
+  - emotionLabel: 12
+    speakingSoundPitch: 1
+    reactionSound:
+      enabled: 0
+      value: {fileID: 0}
+    characterFace:
+      enabled: 1
+      value: {fileID: 2577353762634293905, guid: a4c299a84a0000b49a3e2d292fde68eb, type: 3}
+  - emotionLabel: 5
+    speakingSoundPitch: 1
+    reactionSound:
+      enabled: 0
+      value: {fileID: 0}
+    characterFace:
+      enabled: 1
+      value: {fileID: 2577353762634293905, guid: a4c299a84a0000b49a3e2d292fde68eb, type: 3}
+  - emotionLabel: 14
+    speakingSoundPitch: 1
+    reactionSound:
+      enabled: 0
+      value: {fileID: 0}
+    characterFace:
+      enabled: 1
+      value: {fileID: -4443561769981956324, guid: 07f6bf44aa0c900449929dd85c37107a, type: 3}
