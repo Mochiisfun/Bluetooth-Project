@@ -48,7 +48,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: Money
-        intValue: 7400
+        intValue: 7700
         useClamp: 0
         minValue: 0
         maxValue: 100
@@ -90,7 +90,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberSuspicion
-        intValue: 2
+        intValue: 21
         useClamp: 1
         minValue: 0
         maxValue: 100
@@ -130,7 +130,7 @@ MonoBehaviour:
       type: {class: StringVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: CurrentRequestSize
-        stringValue: Little
+        stringValue: Normal
     - rid: 6759035689954967621
       type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:

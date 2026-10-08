@@ -4,8 +4,8 @@ using DialogueSystem.Runtime.Interaction;
 
 public class DateManager : MonoBehaviour
 {
-    [SerializeField]
-    private MoneyRequestSystem.TargetCharacter currentCharacter;
+    [SerializeField] private MoneyRequestSystem.TargetCharacter currentCharacter;
+    [SerializeField] private int interrogationCooldownDays = 7;
 
     [Header("Date Dialogues")]
     [SerializeField] private DialogueContainer vtuberDateDialogue;
@@ -18,6 +18,8 @@ public class DateManager : MonoBehaviour
 
     [Header("Date Selection UI")]
     [SerializeField] private GameObject dateSelectionUI;
+
+
 
 
     public MoneyRequestSystem.TargetCharacter CurrentCharacter
