@@ -1,0 +1,390 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d50752db9e472b8d367dcf46cdbad8, type: 3}
+  m_Name: T_VT_MoneyRequest
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.Data.DialogueContainer
+  <NodeLinks>k__BackingField:
+  - <BaseNodeGuid>k__BackingField: 33ec90c1-38c0-4e28-b5e1-ca006f187163
+    <PortName>k__BackingField: Next
+    <TargetNodeGuid>k__BackingField: dda0df66-fc48-4488-b02a-a0a69d464e04
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: de97950b-c8ff-4146-bbe0-bfcb9d25c0d0
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: a9286838-e465-4ff4-89db-7063e8a5e21d
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 2fdb9b4e-f390-489b-ac2e-95458b07449f
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: a9286838-e465-4ff4-89db-7063e8a5e21d
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: e8540fc0-c59d-4526-9930-7e2e77736237
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: a9286838-e465-4ff4-89db-7063e8a5e21d
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 6c557309-758c-45a1-8600-d79ea75aaf7c
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: a9286838-e465-4ff4-89db-7063e8a5e21d
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: a9286838-e465-4ff4-89db-7063e8a5e21d
+    <PortName>k__BackingField: Good Choice
+    <TargetNodeGuid>k__BackingField: 1b7784ad-1db2-4043-9f00-dd00b3904615
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: a9286838-e465-4ff4-89db-7063e8a5e21d
+    <PortName>k__BackingField: Very Good Choice
+    <TargetNodeGuid>k__BackingField: 978dc1a9-1e79-4161-817b-c0b2f20934ad
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: a9286838-e465-4ff4-89db-7063e8a5e21d
+    <PortName>k__BackingField: Normal Choice
+    <TargetNodeGuid>k__BackingField: a7ae5568-a5f9-48cf-a732-c2c79939f932
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: a9286838-e465-4ff4-89db-7063e8a5e21d
+    <PortName>k__BackingField: Fallback
+    <TargetNodeGuid>k__BackingField: 09e37a3a-885c-417e-aaa1-8a9c1d007f15
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: a9286838-e465-4ff4-89db-7063e8a5e21d
+    <PortName>k__BackingField: Bad Choice
+    <TargetNodeGuid>k__BackingField: 9a8107f2-97c3-4305-9370-b4d866773c92
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 1b7784ad-1db2-4043-9f00-dd00b3904615
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: e3f19435-b251-4127-9300-f7695aa9905f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 978dc1a9-1e79-4161-817b-c0b2f20934ad
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: e3f19435-b251-4127-9300-f7695aa9905f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: a7ae5568-a5f9-48cf-a732-c2c79939f932
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: e3f19435-b251-4127-9300-f7695aa9905f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 9a8107f2-97c3-4305-9370-b4d866773c92
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: e3f19435-b251-4127-9300-f7695aa9905f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: e3f19435-b251-4127-9300-f7695aa9905f
+    <PortName>k__BackingField: Fail
+    <TargetNodeGuid>k__BackingField: a1aad969-4ccb-4e53-b9aa-a12a6827b302
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: LastRequestSuccess
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: false
+      <Enabled>k__BackingField: 1
+  - <BaseNodeGuid>k__BackingField: dda0df66-fc48-4488-b02a-a0a69d464e04
+    <PortName>k__BackingField: Fallback
+    <TargetNodeGuid>k__BackingField: 09e37a3a-885c-417e-aaa1-8a9c1d007f15
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: dda0df66-fc48-4488-b02a-a0a69d464e04
+    <PortName>k__BackingField: Very Big
+    <TargetNodeGuid>k__BackingField: de97950b-c8ff-4146-bbe0-bfcb9d25c0d0
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: CurrentRequestSize
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: VeryBig
+      <Enabled>k__BackingField: 1
+  - <BaseNodeGuid>k__BackingField: dda0df66-fc48-4488-b02a-a0a69d464e04
+    <PortName>k__BackingField: Big
+    <TargetNodeGuid>k__BackingField: 2fdb9b4e-f390-489b-ac2e-95458b07449f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: CurrentRequestSize
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: Big
+      <Enabled>k__BackingField: 1
+  - <BaseNodeGuid>k__BackingField: dda0df66-fc48-4488-b02a-a0a69d464e04
+    <PortName>k__BackingField: Normal
+    <TargetNodeGuid>k__BackingField: e8540fc0-c59d-4526-9930-7e2e77736237
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: CurrentRequestSize
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: Normal
+      <Enabled>k__BackingField: 1
+  - <BaseNodeGuid>k__BackingField: dda0df66-fc48-4488-b02a-a0a69d464e04
+    <PortName>k__BackingField: Little
+    <TargetNodeGuid>k__BackingField: 6c557309-758c-45a1-8600-d79ea75aaf7c
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: CurrentRequestSize
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: Little
+      <Enabled>k__BackingField: 1
+  - <BaseNodeGuid>k__BackingField: e3f19435-b251-4127-9300-f7695aa9905f
+    <PortName>k__BackingField: Fallback
+    <TargetNodeGuid>k__BackingField: eaec355f-8c2e-41f5-ae53-ab9125992a81
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  <DialogueNodeData>k__BackingField:
+  - guid: 33ec90c1-38c0-4e28-b5e1-ca006f187163
+    dialogue: []
+    position: {x: 100, y: 200}
+    transitionNode: 0
+    entryPoint: 1
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: de97950b-c8ff-4146-bbe0-bfcb9d25c0d0
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: That a lot of money
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1438, y: 88}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 2fdb9b4e-f390-489b-ac2e-95458b07449f
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: That is a lot.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1438, y: 185}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: e8540fc0-c59d-4526-9930-7e2e77736237
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: Ok, but why do you need it?
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1437, y: 306}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 6c557309-758c-45a1-8600-d79ea75aaf7c
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: That fine
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1438, y: 407}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: a9286838-e465-4ff4-89db-7063e8a5e21d
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: Why do you need money?
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1749, y: 252}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 1b7784ad-1db2-4043-9f00-dd00b3904615
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: I get it<event:ResolveGoodAnswer>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2402, y: 297}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 978dc1a9-1e79-4161-817b-c0b2f20934ad
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: Ok <event:ResolveVeryConvincingAnswer>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2402, y: 193}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: a7ae5568-a5f9-48cf-a732-c2c79939f932
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: I guess. <event:ResolveNeutralAnswer>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2405, y: 404}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 09e37a3a-885c-417e-aaa1-8a9c1d007f15
+    dialogue:
+    - <CharacterName>k__BackingField: Momo
+      <Content>k__BackingField: If you see this I must have done something wrong
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1762, y: -71}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 9a8107f2-97c3-4305-9370-b4d866773c92
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: I don't know about this. <event:ResolveSuspiciousAnswer>
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2405, y: 528}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: e3f19435-b251-4127-9300-f7695aa9905f
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: So...
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2717, y: 318}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: dda0df66-fc48-4488-b02a-a0a69d464e04
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: '<event:MoneyRequestOff> You want to borrow my money? '
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 232, y: 129}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: a1aad969-4ccb-4e53-b9aa-a12a6827b302
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: Sorry, I can't right now
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: She seem a little suspicious of you.
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 3898, y: 396}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: eaec355f-8c2e-41f5-ae53-ab9125992a81
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: Here pls use this
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: You got the money
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 3954, y: 254}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  <PathToCheckpoint>k__BackingField: 
+  <IsNarrativeEndReached>k__BackingField: 0
+  <StartFromPreviousNarrativePath>k__BackingField: 1
+  <Characters>k__BackingField:
+  - {fileID: 11400000, guid: d49dcbc8fac012541a32eb252919d99c, type: 2}
