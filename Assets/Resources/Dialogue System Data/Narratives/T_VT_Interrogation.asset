@@ -1,0 +1,462 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d50752db9e472b8d367dcf46cdbad8, type: 3}
+  m_Name: T_VT_Interrogation
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.Data.DialogueContainer
+  <NodeLinks>k__BackingField:
+  - <BaseNodeGuid>k__BackingField: 8e125430-d25e-4af0-a3ad-69ce19d43ae6
+    <PortName>k__BackingField: Next
+    <TargetNodeGuid>k__BackingField: e48eb8cc-221d-4b83-9ca4-5b0f33a3afec
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 883c9173-83da-434c-aa82-96055a978d55
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 6f72f5f9-2699-4dad-a75d-7b0664bc2a5a
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 93382476-8447-4ac1-afc7-11ce01538f0d
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 6f72f5f9-2699-4dad-a75d-7b0664bc2a5a
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: ceb7d24f-cb7b-4479-9219-e6b9cc4e408f
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 6f72f5f9-2699-4dad-a75d-7b0664bc2a5a
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 307ca08b-8027-45f1-93e5-00b6d5d8241d
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 6f72f5f9-2699-4dad-a75d-7b0664bc2a5a
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: e48eb8cc-221d-4b83-9ca4-5b0f33a3afec
+    <PortName>k__BackingField: VeryConvincing
+    <TargetNodeGuid>k__BackingField: 883c9173-83da-434c-aa82-96055a978d55
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: e48eb8cc-221d-4b83-9ca4-5b0f33a3afec
+    <PortName>k__BackingField: Good
+    <TargetNodeGuid>k__BackingField: 93382476-8447-4ac1-afc7-11ce01538f0d
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: e48eb8cc-221d-4b83-9ca4-5b0f33a3afec
+    <PortName>k__BackingField: Suspicious
+    <TargetNodeGuid>k__BackingField: ceb7d24f-cb7b-4479-9219-e6b9cc4e408f
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: e48eb8cc-221d-4b83-9ca4-5b0f33a3afec
+    <PortName>k__BackingField: Extremely Suspicious
+    <TargetNodeGuid>k__BackingField: 307ca08b-8027-45f1-93e5-00b6d5d8241d
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: f83284e1-cbfe-441f-ab63-91b4131176b0
+    <PortName>k__BackingField: Good
+    <TargetNodeGuid>k__BackingField: 1ed08387-8d0b-4913-b9f6-f113c62d9c43
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: f83284e1-cbfe-441f-ab63-91b4131176b0
+    <PortName>k__BackingField: Extremely Suspicious
+    <TargetNodeGuid>k__BackingField: 707e9d4e-a5c7-4746-a3fc-aabeb1d55b77
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: f83284e1-cbfe-441f-ab63-91b4131176b0
+    <PortName>k__BackingField: VeryConvincing
+    <TargetNodeGuid>k__BackingField: a2ab1a24-c503-4672-95b3-169616763e62
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: f83284e1-cbfe-441f-ab63-91b4131176b0
+    <PortName>k__BackingField: Suspicious
+    <TargetNodeGuid>k__BackingField: 5eba14ef-06c4-4678-9af7-939ccb738c67
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: d0446093-6394-4558-85cf-f7c149ca85bf
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: f83284e1-cbfe-441f-ab63-91b4131176b0
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: c832080b-0477-406b-ad3a-47ac8b6ffa5d
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: f83284e1-cbfe-441f-ab63-91b4131176b0
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: a9621083-3afd-4273-b973-7a54cb5787e0
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: f83284e1-cbfe-441f-ab63-91b4131176b0
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 331aa746-e752-4400-a8d4-6a26ac398c45
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: f83284e1-cbfe-441f-ab63-91b4131176b0
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 6f72f5f9-2699-4dad-a75d-7b0664bc2a5a
+    <PortName>k__BackingField: Good
+    <TargetNodeGuid>k__BackingField: 331aa746-e752-4400-a8d4-6a26ac398c45
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 6f72f5f9-2699-4dad-a75d-7b0664bc2a5a
+    <PortName>k__BackingField: VeryConvincing
+    <TargetNodeGuid>k__BackingField: a9621083-3afd-4273-b973-7a54cb5787e0
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 6f72f5f9-2699-4dad-a75d-7b0664bc2a5a
+    <PortName>k__BackingField: Suspicious
+    <TargetNodeGuid>k__BackingField: d0446093-6394-4558-85cf-f7c149ca85bf
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 6f72f5f9-2699-4dad-a75d-7b0664bc2a5a
+    <PortName>k__BackingField: Extremely Suspicious
+    <TargetNodeGuid>k__BackingField: c832080b-0477-406b-ad3a-47ac8b6ffa5d
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 707e9d4e-a5c7-4746-a3fc-aabeb1d55b77
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 5eba14ef-06c4-4678-9af7-939ccb738c67
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 1ed08387-8d0b-4913-b9f6-f113c62d9c43
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: a2ab1a24-c503-4672-95b3-169616763e62
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  <DialogueNodeData>k__BackingField:
+  - guid: 8e125430-d25e-4af0-a3ad-69ce19d43ae6
+    dialogue: []
+    position: {x: 100, y: 200}
+    transitionNode: 0
+    entryPoint: 1
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 883c9173-83da-434c-aa82-96055a978d55
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You explain your story confidently.
+
+        <event:AddVeryConvincingInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 845, y: 135}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 93382476-8447-4ac1-afc7-11ce01538f0d
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You explain your story calmly
+
+        <event:AddGoodInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 846, y: 230}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: ceb7d24f-cb7b-4479-9219-e6b9cc4e408f
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You explain your story with a hint of hesitation.
+
+        <event:AddSuspiciousInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 845, y: 327}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 307ca08b-8027-45f1-93e5-00b6d5d8241d
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You didn''t say anything.
+
+        <event:AddExtremelySuspiciousInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 844, y: 426}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: e48eb8cc-221d-4b83-9ca4-5b0f33a3afec
+    dialogue:
+    - <CharacterName>k__BackingField: Vtuber
+      <Content>k__BackingField: Where is the money?
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: Anwser 1
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 228, y: 200}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: f83284e1-cbfe-441f-ab63-91b4131176b0
+    dialogue: []
+    position: {x: 2005, y: 189}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: d0446093-6394-4558-85cf-f7c149ca85bf
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You explain your story with a hint of hesitation.
+
+        <event:AddSuspiciousInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1713, y: 314}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: c832080b-0477-406b-ad3a-47ac8b6ffa5d
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You didn''t say anything.
+
+        <event:AddExtremelySuspiciousInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1714, y: 440}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: a9621083-3afd-4273-b973-7a54cb5787e0
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You explain your story confidently.
+
+        <event:AddVeryConvincingInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1712, y: 197}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 331aa746-e752-4400-a8d4-6a26ac398c45
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You explain your story calmly
+
+        <event:AddGoodInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1712, y: 79}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 6f72f5f9-2699-4dad-a75d-7b0664bc2a5a
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: Anwser 2
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 1124, y: 199}
+    transitionNode: 0
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 5eba14ef-06c4-4678-9af7-939ccb738c67
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You explain your story with a hint of hesitation.
+
+        <event:AddSuspiciousInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2622, y: 193}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 707e9d4e-a5c7-4746-a3fc-aabeb1d55b77
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You didn''t say anything.
+
+        <event:AddExtremelySuspiciousInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2623, y: 82}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: a2ab1a24-c503-4672-95b3-169616763e62
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You explain your story confidently.
+
+        <event:AddVeryConvincingInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2624, y: 408}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 1ed08387-8d0b-4913-b9f6-f113c62d9c43
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'You explain your story calmly
+
+        <event:AddGoodInterrogationPoints>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2623, y: 300}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  - guid: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
+    dialogue:
+    - <CharacterName>k__BackingField: 
+      <Content>k__BackingField: 'The interrogation is over.
+
+        <event:ResolveInterrogation>'
+      <HideCharacter>k__BackingField: 0
+      <DialogueEvent>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    position: {x: 2935, y: 190}
+    transitionNode: 1
+    entryPoint: 0
+    isCheckpoint: 0
+    disableAlreadyChosenOptions: 0
+  <PathToCheckpoint>k__BackingField: 
+  <IsNarrativeEndReached>k__BackingField: 0
+  <StartFromPreviousNarrativePath>k__BackingField: 0
+  <Characters>k__BackingField:
+  - {fileID: 11400000, guid: d49dcbc8fac012541a32eb252919d99c, type: 2}

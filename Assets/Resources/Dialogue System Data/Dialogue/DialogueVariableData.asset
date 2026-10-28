@@ -28,6 +28,11 @@ MonoBehaviour:
   - rid: 5062963431830978633
   - rid: 6759035689954967620
   - rid: 6759035689954967621
+  - rid: 6759035709512220740
+  - rid: 6759035709512220741
+  - rid: 6759035709512220742
+  - rid: 6759036153040994372
+  - rid: 6759036165315887172
   references:
     version: 2
     RefIds:
@@ -48,7 +53,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: Money
-        intValue: 7700
+        intValue: 7800
         useClamp: 0
         minValue: 0
         maxValue: 100
@@ -82,7 +87,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberAffection
-        intValue: 50
+        intValue: 53
         useClamp: 1
         minValue: 0
         maxValue: 100
@@ -90,7 +95,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberSuspicion
-        intValue: 21
+        intValue: 100
         useClamp: 1
         minValue: 0
         maxValue: 100
@@ -130,9 +135,46 @@ MonoBehaviour:
       type: {class: StringVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: CurrentRequestSize
-        stringValue: Normal
+        stringValue: Little
     - rid: 6759035689954967621
       type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: LastRequestSuccess
         boolValue: 1
+    - rid: 6759035709512220740
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: VtuberLastInterrogationDay
+        intValue: -100
+        useClamp: 0
+        minValue: 0
+        maxValue: 100
+    - rid: 6759035709512220741
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: OLLastInterrogationDay
+        intValue: -100
+        useClamp: 0
+        minValue: 0
+        maxValue: 100
+    - rid: 6759035709512220742
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: CEOLastInterrogationDay
+        intValue: -100
+        useClamp: 0
+        minValue: 0
+        maxValue: 100
+    - rid: 6759036153040994372
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: CurrentInterrogationScore
+        intValue: -3
+        useClamp: 0
+        minValue: 0
+        maxValue: 100
+    - rid: 6759036165315887172
+      type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: InterrogationPassed
+        boolValue: 0
