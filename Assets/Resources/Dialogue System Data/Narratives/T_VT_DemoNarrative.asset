@@ -540,7 +540,7 @@ MonoBehaviour:
   - guid: 336ebba7-62c0-4879-af05-b8a22dc46c3e
     dialogue:
     - <CharacterName>k__BackingField: 
-      <Content>k__BackingField: Let end it here to day.<event:MoneyRequestOff>
+      <Content>k__BackingField: Let end it here to day.<event:MoneyRequestOff> <event:CompleteDate>
       <HideCharacter>k__BackingField: 0
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:

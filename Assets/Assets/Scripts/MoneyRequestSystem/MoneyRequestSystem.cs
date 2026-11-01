@@ -451,7 +451,28 @@ public class MoneyRequestSystem : MonoBehaviour
             $"Amount: {result.Amount}"
         );
 
+        // Consume one time slot and return to Main Hub.
+        CompleteDate();
+
         return result;
+    }
+
+    public void CompleteDate()
+    {
+        // Find the persistent TimeManager.
+        TimeManager timeManager = FindAnyObjectByType<TimeManager>();
+
+        if (timeManager == null)
+        {
+            Debug.LogError(
+                "Cannot complete date: TimeManager was not found!"
+            );
+
+            return;
+        }
+
+        // Advance time and return to the Main Hub.
+        timeManager.CompleteActivity();
     }
 
     public void ResolveVeryConvincingAnswer()

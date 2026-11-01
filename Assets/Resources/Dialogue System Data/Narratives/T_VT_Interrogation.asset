@@ -181,14 +181,6 @@ MonoBehaviour:
       <Operator>k__BackingField: 0
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
-  - <BaseNodeGuid>k__BackingField: 707e9d4e-a5c7-4746-a3fc-aabeb1d55b77
-    <PortName>k__BackingField: Output
-    <TargetNodeGuid>k__BackingField: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
-    <Condition>k__BackingField:
-      <VariableName>k__BackingField: 
-      <Operator>k__BackingField: 0
-      <ComparisonValue>k__BackingField: 
-      <Enabled>k__BackingField: 0
   - <BaseNodeGuid>k__BackingField: 5eba14ef-06c4-4678-9af7-939ccb738c67
     <PortName>k__BackingField: Output
     <TargetNodeGuid>k__BackingField: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
@@ -197,7 +189,7 @@ MonoBehaviour:
       <Operator>k__BackingField: 0
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
-  - <BaseNodeGuid>k__BackingField: 1ed08387-8d0b-4913-b9f6-f113c62d9c43
+  - <BaseNodeGuid>k__BackingField: 707e9d4e-a5c7-4746-a3fc-aabeb1d55b77
     <PortName>k__BackingField: Output
     <TargetNodeGuid>k__BackingField: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
     <Condition>k__BackingField:
@@ -206,6 +198,14 @@ MonoBehaviour:
       <ComparisonValue>k__BackingField: 
       <Enabled>k__BackingField: 0
   - <BaseNodeGuid>k__BackingField: a2ab1a24-c503-4672-95b3-169616763e62
+    <PortName>k__BackingField: Output
+    <TargetNodeGuid>k__BackingField: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
+    <Condition>k__BackingField:
+      <VariableName>k__BackingField: 
+      <Operator>k__BackingField: 0
+      <ComparisonValue>k__BackingField: 
+      <Enabled>k__BackingField: 0
+  - <BaseNodeGuid>k__BackingField: 1ed08387-8d0b-4913-b9f6-f113c62d9c43
     <PortName>k__BackingField: Output
     <TargetNodeGuid>k__BackingField: 1aa0a7fc-4b8f-4a1f-8ff0-ec9e38c58dcf
     <Condition>k__BackingField:
@@ -445,7 +445,8 @@ MonoBehaviour:
     - <CharacterName>k__BackingField: 
       <Content>k__BackingField: 'The interrogation is over.
 
-        <event:ResolveInterrogation>'
+        <event:ResolveInterrogation>
+        <event:CompleteDate>'
       <HideCharacter>k__BackingField: 0
       <DialogueEvent>k__BackingField:
         m_PersistentCalls:

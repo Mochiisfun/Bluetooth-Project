@@ -1,5 +1,7 @@
+
 using System;
 using System.Collections.Generic;
+using System.IO;
 using DialogueSystem.Data;
 using UnityEngine;
 
@@ -43,24 +45,223 @@ public class GameVariableInitializer : MonoBehaviour
         public int MaxIntValue => maxIntValue;
     }
 
+    [Serializable]
+    private class SaveFileData
+    {
+        public List<SavedVariable> variables = new();
+    }
+
+    [Serializable]
+    private class SavedVariable
+    {
+        public string variableName;
+        public VariableType variableType;
+
+        public int intValue;
+        public float floatValue;
+        public string stringValue;
+        public bool boolValue;
+    }
+
+    private static GameVariableInitializer instance;
+
+    private string SaveFilePath =>
+        Path.Combine(Application.persistentDataPath, "savefile.json");
+
     [Header("Starting Game Variables")]
     [SerializeField] private List<StartingVariable> startingVariables = new();
 
     private void Awake()
     {
+        // Keep only one variable manager across all scenes.
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        // Create missing variables with their starting values first.
         InitializeVariables();
+
+        // Then overwrite those values with saved progress, if available.
+        LoadGame();
+    }
+    public static void SaveCurrentGame()
+    {
+        if (instance != null)
+        {
+            instance.SaveGame();
+        }
+        else
+        {
+            Debug.LogWarning(
+                "Cannot save: GameVariableInitializer has not been initialized."
+            );
+        }
+    }
+
+    public void SaveGame()
+    {
+        try
+        {
+            SaveFileData saveData = new SaveFileData();
+
+            foreach (StartingVariable variable in startingVariables)
+            {
+                if (string.IsNullOrWhiteSpace(variable.VariableName))
+                {
+                    continue;
+                }
+
+                if (!DialogueVariableData.Instance.Exists(variable.VariableName))
+                {
+                    continue;
+                }
+
+                if (!HasExpectedType(variable))
+                {
+                    Debug.LogWarning(
+                        $"Skipping save for '{variable.VariableName}' because its type does not match."
+                    );
+                    continue;
+                }
+
+                SavedVariable saved = new SavedVariable
+                {
+                    variableName = variable.VariableName,
+                    variableType = variable.Type
+                };
+
+                switch (variable.Type)
+                {
+                    case VariableType.Int:
+                        saved.intValue =
+                            DialogueVariableData.Instance.Get<int>(variable.VariableName);
+                        break;
+
+                    case VariableType.Float:
+                        saved.floatValue =
+                            DialogueVariableData.Instance.Get<float>(variable.VariableName);
+                        break;
+
+                    case VariableType.String:
+                        saved.stringValue =
+                            DialogueVariableData.Instance.Get<string>(variable.VariableName);
+                        break;
+
+                    case VariableType.Bool:
+                        saved.boolValue =
+                            DialogueVariableData.Instance.Get<bool>(variable.VariableName);
+                        break;
+                }
+
+                saveData.variables.Add(saved);
+            }
+
+            string json = JsonUtility.ToJson(saveData, true);
+            File.WriteAllText(SaveFilePath, json);
+
+            Debug.Log($"Game saved successfully: {SaveFilePath}");
+        }
+        catch (Exception exception)
+        {
+            Debug.LogError($"Failed to save game: {exception.Message}");
+        }
+    }
+
+    public void LoadGame()
+    {
+        if (!File.Exists(SaveFilePath))
+        {
+            Debug.Log("No save file found. Using starting game variables.");
+            return;
+        }
+
+        try
+        {
+            string json = File.ReadAllText(SaveFilePath);
+            SaveFileData saveData = JsonUtility.FromJson<SaveFileData>(json);
+
+            if (saveData == null || saveData.variables == null)
+            {
+                Debug.LogWarning("The save file is empty or invalid.");
+                return;
+            }
+
+            foreach (StartingVariable variable in startingVariables)
+            {
+                if (string.IsNullOrWhiteSpace(variable.VariableName))
+                {
+                    continue;
+                }
+
+                if (!DialogueVariableData.Instance.Exists(variable.VariableName))
+                {
+                    continue;
+                }
+
+                SavedVariable saved = saveData.variables.Find(
+                    entry => entry.variableName == variable.VariableName
+                );
+
+                if (saved == null)
+                {
+                    continue;
+                }
+
+                if (saved.variableType != variable.Type ||
+                    !HasExpectedType(variable))
+                {
+                    Debug.LogWarning(
+                        $"Skipping saved value for '{variable.VariableName}' because its type does not match."
+                    );
+                    continue;
+                }
+
+                switch (variable.Type)
+                {
+                    case VariableType.Int:
+                        DialogueVariableData.Instance.Set(
+                            variable.VariableName, saved.intValue);
+                        break;
+
+                    case VariableType.Float:
+                        DialogueVariableData.Instance.Set(
+                            variable.VariableName, saved.floatValue);
+                        break;
+
+                    case VariableType.String:
+                        DialogueVariableData.Instance.Set(
+                            variable.VariableName, saved.stringValue);
+                        break;
+
+                    case VariableType.Bool:
+                        DialogueVariableData.Instance.Set(
+                            variable.VariableName, saved.boolValue);
+                        break;
+                }
+            }
+
+            Debug.Log("Game loaded successfully.");
+        }
+        catch (Exception exception)
+        {
+            Debug.LogError($"Failed to load game: {exception.Message}");
+        }
     }
 
     private void InitializeVariables()
     {
-        foreach (var variable in startingVariables)
+        foreach (StartingVariable variable in startingVariables)
         {
             if (string.IsNullOrWhiteSpace(variable.VariableName))
             {
                 Debug.LogWarning(
                     "Game Variable Initializer contains a variable with no name."
                 );
-
                 continue;
             }
 
@@ -82,30 +283,22 @@ public class GameVariableInitializer : MonoBehaviour
         {
             case VariableType.Int:
                 DialogueVariableData.Instance.Create(
-                    variable.VariableName,
-                    variable.IntValue
-                );
+                    variable.VariableName, variable.IntValue);
                 break;
 
             case VariableType.Float:
                 DialogueVariableData.Instance.Create(
-                    variable.VariableName,
-                    variable.FloatValue
-                );
+                    variable.VariableName, variable.FloatValue);
                 break;
 
             case VariableType.String:
                 DialogueVariableData.Instance.Create(
-                    variable.VariableName,
-                    variable.StringValue
-                );
+                    variable.VariableName, variable.StringValue);
                 break;
 
             case VariableType.Bool:
                 DialogueVariableData.Instance.Create(
-                    variable.VariableName,
-                    variable.BoolValue
-                );
+                    variable.VariableName, variable.BoolValue);
                 break;
 
             default:
@@ -115,17 +308,10 @@ public class GameVariableInitializer : MonoBehaviour
 
     private void CheckVariableType(StartingVariable variable)
     {
-        var existingType =
+        Type existingType =
             DialogueVariableData.Instance.GetVariableType(variable.VariableName);
 
-        Type expectedType = variable.Type switch
-        {
-            VariableType.Int => typeof(int),
-            VariableType.Float => typeof(float),
-            VariableType.String => typeof(string),
-            VariableType.Bool => typeof(bool),
-            _ => null
-        };
+        Type expectedType = GetExpectedSystemType(variable.Type);
 
         if (existingType != expectedType)
         {
@@ -136,6 +322,26 @@ public class GameVariableInitializer : MonoBehaviour
                 $"found {existingType?.Name}."
             );
         }
+    }
+
+    private Type GetExpectedSystemType(VariableType type)
+    {
+        return type switch
+        {
+            VariableType.Int => typeof(int),
+            VariableType.Float => typeof(float),
+            VariableType.String => typeof(string),
+            VariableType.Bool => typeof(bool),
+            _ => null
+        };
+    }
+
+    private bool HasExpectedType(StartingVariable variable)
+    {
+        Type actualType =
+            DialogueVariableData.Instance.GetVariableType(variable.VariableName);
+
+        return actualType == GetExpectedSystemType(variable.Type);
     }
 
     private void ConfigureIntClamp(StartingVariable variable)

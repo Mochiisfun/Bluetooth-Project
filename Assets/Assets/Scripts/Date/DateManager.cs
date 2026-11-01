@@ -267,6 +267,8 @@ public class DateManager : MonoBehaviour
                 $"GAME OVER: {CurrentCharacter} caught the player!"
             );
 
+            Time.timeScale = 0f;
+
             onInterrogationFailed.Invoke();
 
             return;
@@ -323,5 +325,27 @@ public class DateManager : MonoBehaviour
             $"Suspicion reduced to {suspicionAfterSuccessfulInterrogation}. " +
             $"Next interrogation available after the cooldown."
         );
+
+        // Interrogation completed successfully.
+        // Consume one time slot and return to Main Hub.
+        CompleteDate();
+    }
+
+    public void CompleteDate()
+    {
+        // Find the persistent TimeManager.
+        TimeManager timeManager = FindAnyObjectByType<TimeManager>();
+
+        if (timeManager == null)
+        {
+            Debug.LogError(
+                "Cannot complete date: TimeManager was not found!"
+            );
+
+            return;
+        }
+
+        // Advance time and return to the Main Hub.
+        timeManager.CompleteActivity();
     }
 }
