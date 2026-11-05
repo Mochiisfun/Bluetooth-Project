@@ -62,7 +62,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: Day
-        intValue: 2
+        intValue: 1
         useClamp: 0
         minValue: 0
         maxValue: 100
@@ -88,7 +88,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberAffection
-        intValue: 15
+        intValue: 8
         useClamp: 1
         minValue: 0
         maxValue: 100
@@ -96,7 +96,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberSuspicion
-        intValue: 67
+        intValue: 68
         useClamp: 1
         minValue: 0
         maxValue: 100
@@ -178,7 +178,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: CurrentInterrogationScore
-        intValue: 5
+        intValue: 2
         useClamp: 0
         minValue: 0
         maxValue: 100
