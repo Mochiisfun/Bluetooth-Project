@@ -29,6 +29,18 @@ public class TimeManager : MonoBehaviour
                 "Day",
                 currentDay + 1
             );
+
+            // Check whether a debt collection visit is due.
+            DebtManager debtManager = GetComponent<DebtManager>();
+
+            if (debtManager != null)
+            {
+                debtManager.CheckForCollectionVisit();
+            }
+            else
+            {
+                Debug.LogError("DebtManager was not found!");
+            }
         }
 
         Debug.Log(

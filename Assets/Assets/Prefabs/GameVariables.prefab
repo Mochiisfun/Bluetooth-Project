@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8473857053280636807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8872334834460677966}
+  - component: {fileID: 360219640188805621}
+  - component: {fileID: 5990796083941951553}
+  - component: {fileID: -4643318209562088026}
+  m_Layer: 0
+  m_Name: GameVariables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8872334834460677966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8473857053280636807}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 981.0178, y: 482.97745, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &360219640188805621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8473857053280636807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eeb4cf00b636634d80be8f896c47020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameVariableInitializer
+  startingVariables:
+  - variableName: Money
+    variableType: 0
+    intValue: 100
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: Day
+    variableType: 0
+    intValue: 1
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: PlayerName
+    variableType: 2
+    intValue: 0
+    floatValue: 0
+    stringValue: Player
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: VtuberAffection
+    variableType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: VtuberSuspicion
+    variableType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: OLAffection
+    variableType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: OLSuspicion
+    variableType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: CEOAffection
+    variableType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: CEOSuspicion
+    variableType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: CurrentRequestSize
+    variableType: 2
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: LastRequestSuccess
+    variableType: 3
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: VtuberLastInterrogationDay
+    variableType: 0
+    intValue: -100
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: OLLastInterrogationDay
+    variableType: 0
+    intValue: -100
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: InterrogationPassed
+    variableType: 3
+    intValue: -100
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: TimeSlot
+    variableType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 2
+  - variableName: OriginalDebt
+    variableType: 0
+    intValue: 1000
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 9999999
+  - variableName: DebtRemaining
+    variableType: 0
+    intValue: 1000
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 9999999
+  - variableName: CurrentCollectionWeek
+    variableType: 0
+    intValue: 1
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 1000
+  - variableName: MissedPaymentCount
+    variableType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: DebtPaymentArrears
+    variableType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: NextDebtCollectionDay
+    variableType: 0
+    intValue: 8
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 100
+  - variableName: DebtDeadlineDay
+    variableType: 0
+    intValue: 43
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 1
+    minIntValue: 0
+    maxIntValue: 1000
+  - variableName: DebtCollectorPending
+    variableType: 3
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 1000
+  - variableName: DebtRescueCompleted
+    variableType: 3
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 1000
+  - variableName: DebtPaymentSuccessful
+    variableType: 3
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 1000
+  - variableName: DebtRescuedBy
+    variableType: 2
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    boolValue: 0
+    useIntClamp: 0
+    minIntValue: 0
+    maxIntValue: 1000
+--- !u!114 &5990796083941951553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8473857053280636807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92009c31cbc6e2e49b2d49cc7dd0c2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
+--- !u!114 &-4643318209562088026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8473857053280636807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0155ce2edf86ae94fa616ed69435f0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DebtManager
+  collectionIntervalDays: 7
+  weeklyPaymentPercentages: 050000000a0000000f0000001400000032000000

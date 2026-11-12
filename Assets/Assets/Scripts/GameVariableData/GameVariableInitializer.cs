@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using DialogueSystem.Data;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameVariableInitializer : MonoBehaviour
 {
@@ -99,6 +100,20 @@ public class GameVariableInitializer : MonoBehaviour
         {
             Debug.LogWarning(
                 "Cannot save: GameVariableInitializer has not been initialized."
+            );
+        }
+    }
+
+    public static void LoadCurrentGame()
+    {
+        if (instance != null)
+        {
+            instance.LoadGame();
+        }
+        else
+        {
+            Debug.LogWarning(
+                "Cannot load: GameVariableInitializer has not been initialized."
             );
         }
     }
@@ -245,7 +260,8 @@ public class GameVariableInitializer : MonoBehaviour
                 }
             }
 
-            Debug.Log("Game loaded successfully.");
+            Debug.Log("Game loaded successfully. Reloading mainHub.");
+            SceneManager.LoadScene("mainHub");
         }
         catch (Exception exception)
         {

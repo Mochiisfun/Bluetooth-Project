@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assets/Levels/shop.unity
     guid: 9fd3d3d0827ba994195be3328eb75689
+  - enabled: 1
+    path: Assets/Assets/Levels/debtCollect.unity
+    guid: a897cc011e7b9b542a7dfba50e4e939c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

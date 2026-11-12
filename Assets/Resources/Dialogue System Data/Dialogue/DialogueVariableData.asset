@@ -34,6 +34,17 @@ MonoBehaviour:
   - rid: 6759035709512220742
   - rid: 6759036153040994372
   - rid: 6759036165315887172
+  - rid: 5483015173654970436
+  - rid: 5483015173654970437
+  - rid: 5483015173654970438
+  - rid: 5483015173654970439
+  - rid: 5483015173654970440
+  - rid: 5483015173654970441
+  - rid: 5483015173654970442
+  - rid: 5483015173654970443
+  - rid: 5483015173654970444
+  - rid: 5483015173654970445
+  - rid: 5483015173654970446
   references:
     version: 2
     RefIds:
@@ -54,7 +65,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: Money
-        intValue: 7900
+        intValue: 7800
         useClamp: 0
         minValue: 0
         maxValue: 100
@@ -88,7 +99,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberAffection
-        intValue: 8
+        intValue: 0
         useClamp: 1
         minValue: 0
         maxValue: 100
@@ -96,7 +107,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberSuspicion
-        intValue: 68
+        intValue: 0
         useClamp: 1
         minValue: 0
         maxValue: 100
@@ -136,10 +147,86 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: TimeSlot
-        intValue: 1
+        intValue: 0
         useClamp: 1
         minValue: 0
         maxValue: 2
+    - rid: 5483015173654970436
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: OriginalDebt
+        intValue: 1000
+        useClamp: 1
+        minValue: 0
+        maxValue: 9999999
+    - rid: 5483015173654970437
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: DebtRemaining
+        intValue: 1000
+        useClamp: 1
+        minValue: 0
+        maxValue: 9999999
+    - rid: 5483015173654970438
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: CurrentCollectionWeek
+        intValue: 1
+        useClamp: 1
+        minValue: 0
+        maxValue: 1000
+    - rid: 5483015173654970439
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: MissedPaymentCount
+        intValue: 0
+        useClamp: 1
+        minValue: 0
+        maxValue: 100
+    - rid: 5483015173654970440
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: DebtPaymentArrears
+        intValue: 0
+        useClamp: 1
+        minValue: 0
+        maxValue: 100
+    - rid: 5483015173654970441
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: NextDebtCollectionDay
+        intValue: 8
+        useClamp: 1
+        minValue: 0
+        maxValue: 100
+    - rid: 5483015173654970442
+      type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: DebtDeadlineDay
+        intValue: 43
+        useClamp: 1
+        minValue: 0
+        maxValue: 1000
+    - rid: 5483015173654970443
+      type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: DebtCollectorPending
+        boolValue: 0
+    - rid: 5483015173654970444
+      type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: DebtRescueCompleted
+        boolValue: 0
+    - rid: 5483015173654970445
+      type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: DebtPaymentSuccessful
+        boolValue: 0
+    - rid: 5483015173654970446
+      type: {class: StringVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
+      data:
+        <Name>k__BackingField: DebtRescuedBy
+        stringValue: 
     - rid: 6759035689954967620
       type: {class: StringVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
@@ -154,7 +241,7 @@ MonoBehaviour:
       type: {class: IntVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: VtuberLastInterrogationDay
-        intValue: 1
+        intValue: -100
         useClamp: 0
         minValue: 0
         maxValue: 100
@@ -186,4 +273,4 @@ MonoBehaviour:
       type: {class: BoolVariable, ns: DialogueSystem.Data, asm: Assembly-CSharp}
       data:
         <Name>k__BackingField: InterrogationPassed
-        boolValue: 1
+        boolValue: 0
